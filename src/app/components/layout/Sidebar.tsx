@@ -55,11 +55,11 @@ const menuItems: MenuItem[] = [
     icon: Book, 
     href: '/english',
     submenu: [
-      { name: 'Grade 1', href: '/english/grade/1', icon: '1️⃣' },
-      { name: 'Grade 2', href: '/english/grade/2', icon: '2️⃣' },
-      { name: 'Grade 3', href: '/english/grade/3', icon: '3️⃣' },
-      { name: 'Grade 4', href: '/english/grade/4', icon: '4️⃣' },
-      { name: 'Grade 5', href: '/english/grade/5', icon: '5️⃣' },
+      { name: 'Grade 1', href: '/coming-soon', icon: '1️⃣' },
+      { name: 'Grade 2', href: '/coming-soon', icon: '2️⃣' },
+      { name: 'Grade 3', href: '/coming-soon', icon: '3️⃣' },
+      { name: 'Grade 4', href: '/coming-soon', icon: '4️⃣' },
+      { name: 'Grade 5', href: '/coming-soon', icon: '5️⃣' },
     ],
   },
   { 
@@ -67,9 +67,9 @@ const menuItems: MenuItem[] = [
     icon: BookText, 
     href: '/science',
     submenu: [
-      { name: 'Grade 1', href: '/science/grade/1', icon: '1️⃣' },
-      { name: 'Grade 2', href: '/science/grade/2', icon: '2️⃣' },
-      { name: 'Grade 3', href: '/science/grade/3', icon: '3️⃣' },
+      { name: 'Grade 1', href: '/coming-soon', icon: '1️⃣' },
+      { name: 'Grade 2', href: '/coming-soon', icon: '2️⃣' },
+      { name: 'Grade 3', href: '/coming-soon', icon: '3️⃣' },
     ],
   },
   { 
@@ -77,9 +77,9 @@ const menuItems: MenuItem[] = [
     icon: BookMarked, 
     href: '/history',
     submenu: [
-      { name: 'Grade 4', href: '/history/grade/4', icon: '4️⃣' },
-      { name: 'Grade 5', href: '/history/grade/5', icon: '5️⃣' },
-      { name: 'Grade 6', href: '/history/grade/6', icon: '6️⃣' },
+      { name: 'Grade 4', href: '/coming-soon', icon: '4️⃣' },
+      { name: 'Grade 5', href: '/coming-soon', icon: '5️⃣' },
+      { name: 'Grade 6', href: '/coming-soon', icon: '6️⃣' },
     ],
   },
 ];
@@ -127,7 +127,7 @@ export default function Sidebar() {
                 <BookOpen size={24} />
               </div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-yellow-300 to-yellow-100 bg-clip-text text-transparent">
-              Abizard Learning Center
+              Kids Learning Center
               </h1>
             </Link>
             <button 
@@ -205,7 +205,7 @@ export default function Sidebar() {
               </h3>
               <div className="space-y-2">
                 <Link
-                  href="/favorites"
+                  href="/coming-soon"
                   className="flex items-center p-3 rounded-xl text-white/90 hover:bg-white/10 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
@@ -213,7 +213,7 @@ export default function Sidebar() {
                   <span>Favorites</span>
                 </Link>
                 <Link
-                  href="/progress"
+                  href="/coming-soon"
                   className="flex items-center p-3 rounded-xl text-white/90 hover:bg-white/10 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
@@ -221,7 +221,7 @@ export default function Sidebar() {
                   <span>My Progress</span>
                 </Link>
                 <Link
-                  href="/challenges"
+                  href="/coming-soon"
                   className="flex items-center p-3 rounded-xl text-white/90 hover:bg-white/10 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >

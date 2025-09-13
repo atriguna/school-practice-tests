@@ -45,19 +45,22 @@ export default function Home() {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {subjects.map((subject) => (
-          <Link
-            key={subject.id}
-            href={`/${subject.id}`}
-            className={`${subject.bgColor} rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1`}
-          >
-            <div className={`${subject.textColor} mb-4`}>
-              <subject.icon className="w-10 h-10" />
-            </div>
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">{subject.name}</h2>
-            <p className="text-gray-600">{subject.description}</p>
-          </Link>
-        ))}
+        {subjects.map((subject) => {
+          const href = subject.id === 'math' ? `/math` : `/coming-soon`;
+          return (
+            <Link
+              key={subject.id}
+              href={href}
+              className={`${subject.bgColor} rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1`}
+            >
+              <div className={`${subject.textColor} mb-4`}>
+                <subject.icon className="w-10 h-10" />
+              </div>
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">{subject.name}</h2>
+              <p className="text-gray-600">{subject.description}</p>
+            </Link>
+          );
+        })}
       </div>
       
       <div className="mt-12 bg-white p-6 rounded-xl shadow-md">
