@@ -13,24 +13,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js (latest LTS)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
+          cache: 'pnpm'
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 10 
+          version: latest
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Build Next.js
         run: pnpm build
-
-      - name: Export static files
-        run: pnpm next export
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
