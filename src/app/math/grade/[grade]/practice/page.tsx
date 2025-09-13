@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function PracticePage({ params }: { params: { grade: string } }) {
-  const gradeNumber = Number(params.grade);
+export default async function PracticePage({ params }: { params: Promise<{ grade: string }> }) {
+  const resolvedParams = await params;
+  const gradeNumber = Number(resolvedParams.grade);
 
   if (!Number.isInteger(gradeNumber) || gradeNumber < 1 || gradeNumber > 6) {
     notFound();

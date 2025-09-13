@@ -1,3 +1,4 @@
+// src/app/math/grade/[grade]/page.tsx
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Star, Zap } from 'lucide-react';
@@ -5,14 +6,14 @@ import { getGrade } from '@/app/data/mathCurriculum';
 import GradeCurriculum from './GradeCurriculum';
 import DailyChallenge from '@/app/components/curriculum/DailyChallenge';
 
-// ✅ static params untuk pre-generate grade 1–6
+// ✅ generate static params untuk grade 1–6
 export async function generateStaticParams() {
   return Array.from({ length: 6 }, (_, i) => ({
     grade: (i + 1).toString(),
   }));
 }
 
-export default function GradePage({ params }: { params: { grade: string } }) {
+export default function GradePage({ params }: any) {
   const { grade } = params;
   const gradeNumber = Number(grade);
 
@@ -36,6 +37,7 @@ export default function GradePage({ params }: { params: { grade: string } }) {
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {/* Header */}
       <div
         className={`relative rounded-3xl p-8 mb-10 text-white overflow-hidden ${gradeColors} bg-gradient-to-r`}
       >
@@ -68,8 +70,10 @@ export default function GradePage({ params }: { params: { grade: string } }) {
         </div>
       </div>
 
+      {/* Curriculum */}
       <GradeCurriculum gradeNumber={gradeNumber} grade={gradeData} />
 
+      {/* Daily Challenge */}
       <DailyChallenge gradeNumber={gradeNumber} />
     </div>
   );
