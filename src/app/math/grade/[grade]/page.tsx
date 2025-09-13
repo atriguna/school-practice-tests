@@ -13,8 +13,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function GradePage({ params }: any) {
-  const { grade } = params;
+export default async function GradePage({ params }: any) {
+  const { grade } = await params;
   const gradeNumber = Number(grade);
 
   if (!Number.isInteger(gradeNumber) || gradeNumber < 1 || gradeNumber > 6) {
