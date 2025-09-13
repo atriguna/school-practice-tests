@@ -1,6 +1,3 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/math/grade/[grade]/page": "app/math/grade/[grade]/page.js",
-  "/math/grade/[grade]/practice/page": "app/math/grade/[grade]/practice/page.js",
-  "/coming-soon/page": "app/coming-soon/page.js"
+  "/page": "app/page.js"
 }

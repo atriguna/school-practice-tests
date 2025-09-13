@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'School Practice Tests',
   description: 'Interactive practice tests for junior school students',
+  icons: {
+    icon: '../../public/education.svg',
+  },
 };
 
 export default function RootLayout({
