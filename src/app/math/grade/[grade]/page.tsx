@@ -6,15 +6,21 @@ import { getGrade } from '@/app/data/mathCurriculum';
 import GradeCurriculum from './GradeCurriculum'; 
 import DailyChallenge from '../../../components/curriculum/DailyChallenge';
 
+// ✅ ini yang wajib buat static export
+export async function generateStaticParams() {
+  // grade valid: 1 sampai 6
+  return Array.from({ length: 6 }, (_, i) => ({
+    grade: (i + 1).toString(),
+  }));
+}
 
-export default async function GradePage({
-  params,
-}: {
-  params: Promise<{ grade: string }>;
-}) {
-  const { grade } = await params; // ⬅️ unwrap Promise (Next.js 15)
+export default function GradePage({ params }: { params: { grade: string } }) {
+  const { grade } = params;
   const gradeNumber = Number(grade);
-  if (!Number.isInteger(gradeNumber) || gradeNumber < 1 || gradeNumber > 6) notFound();
+
+  if (!Number.isInteger(gradeNumber) || gradeNumber < 1 || gradeNumber > 6) {
+    notFound();
+  }
 
   const gradeId = `grade-${gradeNumber}`;
   const gradeData = getGrade(gradeId);
@@ -32,7 +38,9 @@ export default async function GradePage({
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className={`relative rounded-3xl p-8 mb-10 text-white overflow-hidden ${gradeColors} bg-gradient-to-r`}>
+      <div
+        className={`relative rounded-3xl p-8 mb-10 text-white overflow-hidden ${gradeColors} bg-gradient-to-r`}
+      >
         <div className="relative z-10">
           <Link
             href="/math"
@@ -62,10 +70,7 @@ export default async function GradePage({
         </div>
       </div>
 
-      {/* Client child yang handle expand/collapse */}
       <GradeCurriculum gradeNumber={gradeNumber} grade={gradeData} />
-
-      {/* Daily Challenge */}
       <DailyChallenge gradeNumber={gradeNumber} />
     </div>
   );

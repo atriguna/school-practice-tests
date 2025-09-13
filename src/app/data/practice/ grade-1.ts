@@ -72,7 +72,7 @@ export const grade1Practice: Record<string, Question[]> = {
       id: 4,
       question: 'Which is equal: 9 + 1 or 12?',
       options: ['They are equal', '9 + 1 is bigger', '12 is bigger', 'None'],
-      correctAnswer: 'They are equal',
+      correctAnswer: '12 is bigger',
       explanation: '9 + 1 = 10, which is smaller than 12.',
       topic: 'Comparing sums'
     },
@@ -189,7 +189,7 @@ export const grade1Practice: Record<string, Question[]> = {
     {
       id: 3,
       question: 'What is the value of 8 in 86?',
-      options: ['8', '80', '800', '8 tens'],
+      options: ['8', '80', '800', '18'],
       correctAnswer: '80',
       explanation: '8 is in the tens place, so it is 80.',
       topic: 'Value of digits'
