@@ -236,7 +236,7 @@ export default function Sidebar() {
           <div className="p-4 border-t border-white/10">
             <div className="text-center text-sm text-white/60">
               <p>Made with ❤️ for young learners</p>
-              <p className="mt-1 text-xs">© {new Date().getFullYear()} LearnHub</p>
+              <p className="mt-1 text-xs">© {new Date().getFullYear()} Kids Learning Center</p>
             </div>
           </div>
         </div>
