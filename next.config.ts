@@ -1,10 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  output: "export", // ⛔ kalau mau API routes, ganti jadi "standalone"
+  reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true, 
+    ignoreDuringBuilds: true,
   },
 };
+
+console.log(
+  "✅ NEXT Build sees DEEPSEEK_KEY:",
+  process.env.DEEPSEEK_KEY ? "SET" : "MISSING"
+);
 
 export default nextConfig;
