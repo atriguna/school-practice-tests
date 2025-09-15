@@ -24,7 +24,7 @@ Return the explanation in Markdown format.
     const response = await fetch("https://api.deepseek.com/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${process.env.DEEPSEEK_API_KEY}`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_DEEPSEEK_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
