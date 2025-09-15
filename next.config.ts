@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export", // ⛔ kalau mau API routes, ganti jadi "standalone"
+  output: "standalone", // ⛔ kalau mau API routes, ganti jadi "standalone"
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
