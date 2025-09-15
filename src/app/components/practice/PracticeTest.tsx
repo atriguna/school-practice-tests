@@ -59,7 +59,7 @@ export default function PracticeTest({ questions, onComplete, resumeIndex = 0 }:
       // Kalau belum ada → fetch ke API
       setLoadingExplain(true);
       try {
-        const res = await fetch("/api/explain", {
+        const res = await fetch("https://api.ruangbelajar.info/api/explain", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

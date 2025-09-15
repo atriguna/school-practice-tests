@@ -42,7 +42,7 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
         return;
       }
 
-      const res = await fetch("/api/question", {
+      const res = await fetch("https://api.ruangbelajar.info/api/question", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ grade }),
