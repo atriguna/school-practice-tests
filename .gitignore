@@ -4,3 +4,7 @@
 # production
 /.next
 /out
+
+.env
+.env.local
+.env.*.local

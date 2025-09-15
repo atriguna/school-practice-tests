@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "5a2e01155ad083291b1cb3f26dfeef8c",
-    "previewModeSigningKey": "fc81a2ef8b4e7ea80038be411085b9780c0972341247b9ea6fe4bcb2f93798c5",
-    "previewModeEncryptionKey": "fa064fbd7c4fd766cd6035a0456b2bd9aa14f6d85bad79ca6f4f0e59f6694d75"
-  }
-}
+{"version":4,"routes":{"/math/grade/1":{},"/math/grade/2":{},"/math/grade/3":{},"/math/grade/4":{},"/math/grade/5":{},"/math/grade/6":{},"/math/grade/1/practice":{},"/math/grade/2/practice":{},"/math/grade/3/practice":{},"/math/grade/4/practice":{},"/math/grade/5/practice":{},"/math/grade/6/practice":{}},"dynamicRoutes":{"/math/grade/[grade]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/math/grade/[grade]","routeRegex":"^\\/math\\/grade\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/math/grade/[grade]/practice":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/math/grade/[grade]/practice","routeRegex":"^\\/math\\/grade\\/([^/]+?)\\/practice(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"c4fee9ba4f44928299761017650b440c","previewModeSigningKey":"a6525f71b43ae79a491ebe9d7ebe6541624f97cd93388b2d1f670192a70cf38e","previewModeEncryptionKey":"89e54d64056906eae7d6a470cb12f2c1324d7d5c8ed7eb3afc43a2185c87e174"}}

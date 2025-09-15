@@ -9,7 +9,7 @@ export default function QuizResult({
   total: number;
   onClose: () => void;
 }) {
-  const percentage = Math.round((score / total) * 100);
+  const percentage = total > 0 ? Math.round((score / total) * 100) : 0;
   const isGreat = percentage >= 80;
 
   return (

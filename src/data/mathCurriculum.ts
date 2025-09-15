@@ -316,3 +316,18 @@ export const getGrade = (gradeId: string) => {
 export const getAllGrades = () => {
   return Object.values(mathCurriculum);
 };
+
+// helper untuk ambil random subtopic dari sebuah grade
+export const getRandomSubtopic = (gradeId: string): string | null => {
+  const grade = mathCurriculum[gradeId];
+  if (!grade) return null;
+
+  // pilih topic random
+  const topic = grade.topics[Math.floor(Math.random() * grade.topics.length)];
+  if (!topic || topic.subtopics.length === 0) return null;
+
+  // pilih subtopic random
+  const subtopic = topic.subtopics[Math.floor(Math.random() * topic.subtopics.length)];
+  return subtopic;
+};
+

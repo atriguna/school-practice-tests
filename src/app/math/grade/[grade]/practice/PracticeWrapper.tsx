@@ -1,30 +1,129 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import { useParams, useRouter } from 'next/navigation';
 import PracticeTest from '@/app/components/practice/PracticeTest';
-import { Question } from '@/app/data/types';
 import QuizResult from '@/app/components/QuizResult';
+import { Question } from '@/app/data/types';
 
-export default function PracticeWrapper({ questions }: { questions: Question[] }) {
+export default function PracticeWrapper() {
+  const params = useParams();
+  const router = useRouter();
+  const grade = params?.grade ?? "1";
+
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [loading, setLoading] = useState(true);
   const [score, setScore] = useState<number | null>(null);
   const [total, setTotal] = useState<number>(0);
 
+  const fallbackQuestions: Question[] = [
+    {
+      id : 2,
+      question: "2 + 3 = ?",
+      options: ["4", "5", "6", "7"],
+      correctAnswer: "5",
+      explanation: "Adding 2 and 3 gives 5.",
+      topic: "basic math",
+    },
+  ];
+
+  const fetchQuestions = useCallback(async () => {
+    setLoading(true);
+
+    try {
+      // 🔹 Cek localStorage
+      const cached = localStorage.getItem(`questions-grade-${grade}`);
+      if (cached) {
+        console.log("📦 Loaded from cache");
+        setQuestions(JSON.parse(cached));
+        setLoading(false);
+        return;
+      }
+
+      // 🔹 Fetch dari API
+      const res = await fetch("/api/question", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ grade }),
+      });
+      const data = await res.json();
+
+      console.log("🎯 API Response:", data);
+
+      if (data.questions?.length) {
+        setQuestions(data.questions);
+        localStorage.setItem(
+          `questions-grade-${grade}`,
+          JSON.stringify(data.questions)
+        );
+      } else {
+        throw new Error("API returned empty questions");
+      }
+    } catch (err) {
+      console.error("❌ Error fetching questions, using fallback:", err);
+      setQuestions(fallbackQuestions);
+      localStorage.removeItem(`questions-grade-${grade}`); // reset cache
+    } finally {
+      setLoading(false);
+    }
+  }, [grade]);
+
+  useEffect(() => {
+    fetchQuestions();
+  }, [fetchQuestions]);
+
+  const handleComplete = (s: number, t: number) => {
+    setScore(s);
+    setTotal(t);
+
+    // 🔹 Clear cache setelah selesai
+    localStorage.removeItem(`questions-grade-${grade}`);
+    Object.keys(localStorage).forEach((key) => {
+      if (key.startsWith(`explain-${grade}-`)) {
+        localStorage.removeItem(key);
+      }
+    });
+  };
+
+  const handleCloseResult = () => {
+    setScore(null);
+    router.push(`/math/grade/${grade}`);
+  };
+
   return (
     <div>
-      <PracticeTest
-        questions={questions}
-        onComplete={(s, t) => {
-          setScore(s);
-          setTotal(t);
-        }}
-      />
+      {/* Modal Loading */}
+      {loading && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+          <div className="bg-white p-6 rounded-2xl shadow-xl w-80 text-center">
+            <h2 className="text-lg font-bold text-gray-800 mb-2">⏳ Please Wait</h2>
+            <p className="text-sm text-gray-600">Preparing your practice test...</p>
+            <div className="mt-4 flex justify-center">
+              <div className="w-6 h-6 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          </div>
+        </div>
+      )}
 
+      {/* Soal */}
+      {!loading && questions.length > 0 && score === null && (
+        <PracticeTest questions={questions} onComplete={handleComplete} />
+      )}
+
+      {/* Hasil */}
       {score !== null && (
         <QuizResult
           score={score}
           total={total}
-          onClose={() => setScore(null)}
+          onClose={handleCloseResult}
         />
+      )}
+
+      {/* fallback kosong */}
+      {!loading && questions.length === 0 && (
+        <p className="text-center text-red-500">
+          ⚠️ No practice questions available. Please try again.
+        </p>
       )}
     </div>
   );
