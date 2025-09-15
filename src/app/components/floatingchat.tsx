@@ -26,11 +26,11 @@ export default function FloatingChat() {
     setIsTyping(true);
 
     try {
-      const res = await fetch("/api/edu-chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage }),
-      });
+        const res = await fetch("/api/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: userMessage }),
+        });          
       const data = await res.json();
       setMessages((prev) => [...prev, { sender: "bot", text: data.reply }]);
     } catch (err) {

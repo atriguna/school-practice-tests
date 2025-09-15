@@ -1,4 +1,4 @@
-name: Deploy to Cloudflare Workers
+name: Deploy Frontend + Worker
 
 on:
   push:
@@ -10,31 +10,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js (LTS)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
+          node-version: "20"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 10
+          version: 8
 
-      - name: Install dependencies
+      - name: Install deps
         run: pnpm install --frozen-lockfile
 
-      - name: Build Next.js (standalone)
+      - name: Build Next.js (export)
         run: pnpm build
-        env:
-          DEEPSEEK_KEY: ${{ secrets.DEEPSEEK_KEY }}
 
-      - name: Deploy with Wrangler
-        run: npx wrangler deploy
+      - name: Deploy Frontend (Pages)
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ruangbelajar   # ganti sesuai project di Cloudflare Pages
+          directory: ./out
+
+      - name: Deploy Worker API
+        run: npx wrangler deploy --minify
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          DEEPSEEK_KEY: ${{ secrets.DEEPSEEK_KEY }}
-
