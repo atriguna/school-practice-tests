@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { ArrowLeft, Check, X, Sparkles } from 'lucide-react';
@@ -6,12 +8,18 @@ import type { Question } from '@/app/data/types';
 type PracticeTestProps = {
   questions: Question[];
   onComplete: (score: number, total: number) => void;
-  resumeIndex?: number; // ✅ prop optional untuk resume
+  resumeIndex?: number;
+  fetchExplanation: (question: string, wrongAnswer: string, grade: string) => Promise<string>;
 };
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
-export default function PracticeTest({ questions, onComplete, resumeIndex = 0 }: PracticeTestProps) {
+export default function PracticeTest({
+  questions,
+  onComplete,
+  resumeIndex = 0,
+  fetchExplanation,
+}: PracticeTestProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(resumeIndex);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [score, setScore] = useState(0);
@@ -26,7 +34,7 @@ export default function PracticeTest({ questions, onComplete, resumeIndex = 0 }:
   const current = questions[currentQuestionIndex];
   const isLast = currentQuestionIndex === questions.length - 1;
 
-  // 🔹 Save progress setiap kali index/score berubah
+  // 🔹 Save progress
   useEffect(() => {
     localStorage.setItem(
       `practice-progress-grade-${grade}`,
@@ -41,38 +49,26 @@ export default function PracticeTest({ questions, onComplete, resumeIndex = 0 }:
     if (answered) return;
     setSelectedOption(option);
     setAnswered(true);
-  
+
     if (option === current.correctAnswer) {
       setScore((s) => s + 1);
       setAiExplanation("");
     } else {
-      // ✅ Cek cache dulu
       const key = `explain-${grade}-${currentQuestionIndex}-${option}`;
       const cachedExplain = localStorage.getItem(key);
-  
+
       if (cachedExplain) {
         console.log("✅ Loaded explanation from cache:", cachedExplain);
         setAiExplanation(cachedExplain);
-        return; // ⛔ Stop, jangan fetch lagi
+        return;
       }
-  
-      // Kalau belum ada → fetch ke API
+
       setLoadingExplain(true);
       try {
-        const res = await fetch("https://api.ruangbelajar.info/api/explain", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            question: current.question,
-            wrongAnswer: option,
-            grade: grade,
-          }),
-        });
-        const data = await res.json();
-        setAiExplanation(data.explanation || "Oops, try again!");
-  
-        // ✅ Simpan hasil baru ke cache
-        localStorage.setItem(key, data.explanation || "");
+        const explanation = await fetchExplanation(current.question, option, grade as string);
+        setAiExplanation(explanation);
+
+        localStorage.setItem(key, explanation || "");
       } catch (err) {
         console.error("Failed to fetch explanation:", err);
         setAiExplanation("⚠️ Failed to get AI explanation.");
@@ -84,7 +80,6 @@ export default function PracticeTest({ questions, onComplete, resumeIndex = 0 }:
 
   const handleNext = () => {
     if (isLast) {
-      // ✅ Cek kalau memang ada soal
       if (questions.length > 0) {
         onComplete(score, questions.length);
       }
@@ -93,8 +88,8 @@ export default function PracticeTest({ questions, onComplete, resumeIndex = 0 }:
     setCurrentQuestionIndex((i) => i + 1);
     setSelectedOption(null);
     setAnswered(false);
-    setAiExplanation(""); // reset tiap soal baru
-  };  
+    setAiExplanation("");
+  };
 
   const getOptionClass = (option: string) => {
     if (!answered) return 'hover:ring-2 hover:ring-blue-300';
@@ -132,7 +127,9 @@ export default function PracticeTest({ questions, onComplete, resumeIndex = 0 }:
             <span className="font-semibold">Grade {grade} Math Practice</span>
           </div>
 
-          <div className="text-sm text-gray-600">Q {currentQuestionIndex + 1}/{questions.length}</div>
+          <div className="text-sm text-gray-600">
+            Q {currentQuestionIndex + 1}/{questions.length}
+          </div>
         </div>
 
         {/* Progress dots */}

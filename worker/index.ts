@@ -63,31 +63,32 @@ export default {
       // ========================
       if (url.pathname.startsWith("/api/question") && req.method === "POST") {
         const { grade } = await req.json();
-        const subtopic = "general math"; // bisa diganti random subtopic kalau mau
+        const subtopic = "general math"; // bisa di-random
   
         const prompt = `
-    Generate 5 multiple-choice questions for grade ${grade} students
-    based on the Cambridge curriculum subtopic: "${subtopic}".
+  Generate 5 multiple-choice questions for grade ${grade} students
+  based on the Cambridge curriculum subtopic: "${subtopic}".
   
-    Rules:
-    - Strictly align with Cambridge curriculum.
-    - Provide 4 options (A–D).
-    - Ensure one correctAnswer is included in the options.
-    - Add a short explanation (1–2 sentences).
-    - Return valid JSON only.
+  Rules:
+  - Strictly align with Cambridge curriculum.
+  - Provide 4 options (A–D).
+  - Ensure one correctAnswer is included in the options.
+  - Add a short explanation (1–2 sentences).
+  - Return valid JSON only.
   
-    Format:
-    {
-      "questions": [
-        {
-          "question": "Question text",
-          "options": ["Option A", "Option B", "Option C", "Option D"],
-          "correctAnswer": "Correct option text",
-          "explanation": "1–2 sentences explanation",
-          "topic": "${subtopic}"
-        }
-      ]
-    }`;
+  Format:
+  {
+    "questions": [
+      {
+        "question": "Question text",
+        "options": ["Option A", "Option B", "Option C", "Option D"],
+        "correctAnswer": "Correct option text",
+        "explanation": "1–2 sentences explanation",
+        "topic": "${subtopic}"
+      }
+    ]
+  }
+  `;
   
         const res = await fetch("https://api.deepseek.com/chat/completions", {
           method: "POST",
@@ -114,17 +115,24 @@ export default {
           console.error("⚠️ Failed to parse AI JSON, using fallback.");
         }
   
+        // 🟢 Strip jawaban & penjelasan biar ga bisa diintip
+        const safeQuestions = parsed.questions?.map((q: any, i: number) => ({
+          id: `q${i + 1}`,
+          question: q.question,
+          options: q.options,
+          topic: q.topic,
+        }));
+  
         return withCORS(
           Response.json(
-            parsed.questions?.length
-              ? parsed
+            safeQuestions?.length
+              ? { questions: safeQuestions }
               : {
                   questions: [
                     {
+                      id: "q1",
                       question: "2 + 3 = ?",
                       options: ["4", "5", "6", "7"],
-                      correctAnswer: "5",
-                      explanation: "Adding 2 and 3 gives 5.",
                       topic: subtopic,
                     },
                   ],

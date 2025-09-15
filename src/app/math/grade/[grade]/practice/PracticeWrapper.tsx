@@ -19,9 +19,10 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
   const [score, setScore] = useState<number | null>(null);
   const [total, setTotal] = useState<number>(0);
 
+  // ✅ fallback harus lengkap sesuai type
   const fallbackQuestions: Question[] = [
     {
-      id: 2,
+      id: 1,
       question: "2 + 3 = ?",
       options: ["4", "5", "6", "7"],
       correctAnswer: "5",
@@ -30,6 +31,7 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
     },
   ];
 
+  // 🔹 Fetch questions dari Worker API
   const fetchQuestions = useCallback(async () => {
     setLoading(true);
 
@@ -47,8 +49,8 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ grade }),
       });
-      const data = await res.json();
 
+      const data = await res.json();
       console.log("🎯 API Response:", data);
 
       if (data.questions?.length) {
@@ -73,10 +75,29 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
     fetchQuestions();
   }, [fetchQuestions]);
 
+  // 🔹 Ambil explanation per jawaban salah
+  const fetchExplanation = async (question: string, wrongAnswer: string) => {
+    try {
+      const res = await fetch("https://api.ruangbelajar.info/api/explain", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question, wrongAnswer, grade }),
+      });
+
+      const data = await res.json();
+      return data.explanation || "⚠️ No explanation available.";
+    } catch (err) {
+      console.error("❌ Error fetching explanation:", err);
+      return "⚠️ Failed to fetch explanation.";
+    }
+  };
+
+  // 🔹 Selesai kuis
   const handleComplete = (s: number, t: number) => {
     setScore(s);
     setTotal(t);
 
+    // clear cache
     localStorage.removeItem(`questions-grade-${grade}`);
     Object.keys(localStorage).forEach((key) => {
       if (key.startsWith(`explain-${grade}-`)) {
@@ -105,7 +126,11 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
       )}
 
       {!loading && questions.length > 0 && score === null && (
-        <PracticeTest questions={questions} onComplete={handleComplete} />
+        <PracticeTest
+          questions={questions}
+          onComplete={handleComplete}
+          fetchExplanation={fetchExplanation} // 🔹 lempar ke PracticeTest
+        />
       )}
 
       {score !== null && (
