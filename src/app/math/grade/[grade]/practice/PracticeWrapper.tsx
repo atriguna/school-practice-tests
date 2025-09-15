@@ -1,15 +1,18 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import PracticeTest from '@/app/components/practice/PracticeTest';
 import QuizResult from '@/app/components/QuizResult';
 import { Question } from '@/app/data/types';
 
-export default function PracticeWrapper() {
-  const params = useParams();
+interface PracticeWrapperProps {
+  gradeNumber: number;
+}
+
+export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
   const router = useRouter();
-  const grade = params?.grade ?? "1";
+  const grade = gradeNumber.toString();
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState(true);
@@ -18,7 +21,7 @@ export default function PracticeWrapper() {
 
   const fallbackQuestions: Question[] = [
     {
-      id : 2,
+      id: 2,
       question: "2 + 3 = ?",
       options: ["4", "5", "6", "7"],
       correctAnswer: "5",
@@ -31,7 +34,6 @@ export default function PracticeWrapper() {
     setLoading(true);
 
     try {
-      // 🔹 Cek localStorage
       const cached = localStorage.getItem(`questions-grade-${grade}`);
       if (cached) {
         console.log("📦 Loaded from cache");
@@ -40,7 +42,6 @@ export default function PracticeWrapper() {
         return;
       }
 
-      // 🔹 Fetch dari API
       const res = await fetch("/api/question", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -62,7 +63,7 @@ export default function PracticeWrapper() {
     } catch (err) {
       console.error("❌ Error fetching questions, using fallback:", err);
       setQuestions(fallbackQuestions);
-      localStorage.removeItem(`questions-grade-${grade}`); // reset cache
+      localStorage.removeItem(`questions-grade-${grade}`);
     } finally {
       setLoading(false);
     }
@@ -76,7 +77,6 @@ export default function PracticeWrapper() {
     setScore(s);
     setTotal(t);
 
-    // 🔹 Clear cache setelah selesai
     localStorage.removeItem(`questions-grade-${grade}`);
     Object.keys(localStorage).forEach((key) => {
       if (key.startsWith(`explain-${grade}-`)) {
@@ -92,7 +92,6 @@ export default function PracticeWrapper() {
 
   return (
     <div>
-      {/* Modal Loading */}
       {loading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
           <div className="bg-white p-6 rounded-2xl shadow-xl w-80 text-center">
@@ -105,12 +104,10 @@ export default function PracticeWrapper() {
         </div>
       )}
 
-      {/* Soal */}
       {!loading && questions.length > 0 && score === null && (
         <PracticeTest questions={questions} onComplete={handleComplete} />
       )}
 
-      {/* Hasil */}
       {score !== null && (
         <QuizResult
           score={score}
@@ -119,7 +116,6 @@ export default function PracticeWrapper() {
         />
       )}
 
-      {/* fallback kosong */}
       {!loading && questions.length === 0 && (
         <p className="text-center text-red-500">
           ⚠️ No practice questions available. Please try again.

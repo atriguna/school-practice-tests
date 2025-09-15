@@ -1,18 +1,19 @@
 import { notFound } from "next/navigation";
 import PracticeWrapper from "./PracticeWrapper";
 
+// ✅ static params
 export async function generateStaticParams() {
   return [1, 2, 3, 4, 5, 6].map((grade) => ({
     grade: grade.toString(),
   }));
 }
 
-export default function PracticePage({ params }: { params: { grade: string } }) {
-  const { grade } = params;
+export default async function PracticePage({ params }: any) {
+  const grade = params.grade;
   const gradeNumber = Number(grade);
 
   if (!Number.isInteger(gradeNumber) || gradeNumber < 1 || gradeNumber > 6) {
-    notFound();
+    return notFound();
   }
 
   return (
@@ -20,7 +21,7 @@ export default function PracticePage({ params }: { params: { grade: string } }) 
       <h1 className="text-2xl font-bold mb-6 text-black">
         Grade {gradeNumber} Practice Test
       </h1>
-      <PracticeWrapper />
+      <PracticeWrapper gradeNumber={gradeNumber} />
     </div>
   );
 }
