@@ -45,6 +45,15 @@
       "static/chunks/772-ee773d70668838ce.js",
       "static/chunks/app/math/page-56958c02e9266fab.js"
     ],
+    "/math/grade/[grade]/page": [
+      "static/chunks/webpack-08ccee8149485d0a.js",
+      "static/chunks/cff928f3-26766f4ecd043e64.js",
+      "static/chunks/134-7f57497ff58ae12d.js",
+      "static/chunks/main-app-e42ecc337918bbf5.js",
+      "static/chunks/772-ee773d70668838ce.js",
+      "static/chunks/365-3bcf897a79ccb02a.js",
+      "static/chunks/app/math/grade/[grade]/page-2c846d7279be589b.js"
+    ],
     "/page": [
       "static/chunks/webpack-08ccee8149485d0a.js",
       "static/chunks/cff928f3-26766f4ecd043e64.js",
@@ -59,15 +68,6 @@
       "static/chunks/134-7f57497ff58ae12d.js",
       "static/chunks/main-app-e42ecc337918bbf5.js",
       "static/chunks/app/math/grade/[grade]/practice/page-f459b6e8d60208cb.js"
-    ],
-    "/math/grade/[grade]/page": [
-      "static/chunks/webpack-08ccee8149485d0a.js",
-      "static/chunks/cff928f3-26766f4ecd043e64.js",
-      "static/chunks/134-7f57497ff58ae12d.js",
-      "static/chunks/main-app-e42ecc337918bbf5.js",
-      "static/chunks/772-ee773d70668838ce.js",
-      "static/chunks/365-3bcf897a79ccb02a.js",
-      "static/chunks/app/math/grade/[grade]/page-2c846d7279be589b.js"
     ],
     "/coming-soon/layout": [
       "static/chunks/webpack-08ccee8149485d0a.js",
