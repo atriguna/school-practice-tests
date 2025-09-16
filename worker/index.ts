@@ -1,10 +1,34 @@
 import { mathCurriculum, getRandomSubtopic } from "../src/data/mathCurriculum";
 
+function withCORS(data: any, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",   // ✅ izinkan semua origin
+      "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
+}
+
 export default {
   async fetch(req: Request, env: { DEEPSEEK_KEY: string }) {
     const url = new URL(req.url);
 
-    // api/chat
+    // ✅ Handle preflight (OPTIONS)
+    if (req.method === "OPTIONS") {
+      return new Response(null, {
+        status: 204,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
+      });
+    }
+
+    // ---------------- /api/chat ----------------
     if (url.pathname.startsWith("/api/chat") && req.method === "POST") {
       const { message } = await req.json();
 
@@ -30,21 +54,22 @@ Keep your tone friendly and simple.`,
       });
 
       const data = await res.json();
-      return Response.json({
+      return withCORS({
         reply: data.choices?.[0]?.message?.content ?? "⚠️ No reply",
       });
     }
 
-    // api/question
+    // ---------------- /api/question ----------------
     if (url.pathname.startsWith("/api/question") && req.method === "POST") {
       const { grade } = await req.json();
+
       const gradeId = `grade-${grade}`;
       const gradeData = mathCurriculum[gradeId];
       if (!gradeData) {
-        return Response.json({ questions: [] }, { status: 400 });
+        return withCORS({ questions: [] });
       }
 
-      const subtopic = getRandomSubtopic(gradeId) || "basic math";
+      const subtopic = getRandomSubtopic(gradeId) || "general math";
 
       const prompt = `
       Generate 5 multiple-choice questions for ${gradeData.name} students
@@ -85,13 +110,12 @@ Keep your tone friendly and simple.`,
 
       const data = await res.json();
       const content = data.choices?.[0]?.message?.content ?? "{}";
-
       let parsed = { questions: [] };
       try {
         parsed = JSON.parse(content.replace(/```json|```/g, "").trim());
       } catch {}
 
-      return Response.json(
+      return withCORS(
         parsed.questions?.length
           ? parsed
           : {
@@ -108,7 +132,7 @@ Keep your tone friendly and simple.`,
       );
     }
 
-    // api/explain
+    // ---------------- /api/explain ----------------
     if (url.pathname.startsWith("/api/explain") && req.method === "POST") {
       const { question, wrongAnswer, grade } = await req.json();
 
@@ -133,12 +157,12 @@ Keep your tone friendly and simple.`,
       });
 
       const data = await res.json();
-      return Response.json({
+      return withCORS({
         explanation:
           data.choices?.[0]?.message?.content ?? "⚠️ No explanation",
       });
     }
 
-    return new Response("Not Found", { status: 404 });
+    return withCORS({ error: "Not Found" }, 404);
   },
 };

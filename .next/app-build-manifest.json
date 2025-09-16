@@ -11,11 +11,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/math/grade/[grade]/page.js"
     ],
-    "/math/grade/[grade]/practice/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/math/grade/[grade]/practice/page.js"
-    ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
