@@ -2,16 +2,9 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { QuestionWorksheets } from "@/app/data/types";
 
-type Question = {
-  id: string;
-  question_text: string;
-  options: string[];
-  correct_answer: string;
-  explanation?: string;
-};
-
-export default function QuestionCard({ question }: { question: Question }) {
+export default function QuestionCard({ question }: { question: QuestionWorksheets }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [feedback, setFeedback] = useState<null | "correct" | "wrong">(null);
 

@@ -15,7 +15,7 @@ export type LessonOutline = {
 };
 
 export type QuestionWorksheets = {
-  id: string;
+  id: number;
   question_text: string;
   options: string[];
   correct_answer: string;

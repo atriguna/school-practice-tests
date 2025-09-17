@@ -1,5 +1,12 @@
 {
-  "/math/grade/[grade]/practice/page": "app/math/grade/[grade]/practice/page.js",
+  "/api/explain/route": "app/api/explain/route.js",
+  "/api/edu-chat/route": "app/api/edu-chat/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/question/route": "app/api/question/route.js",
+  "/page": "app/page.js",
   "/math/grade/[grade]/page": "app/math/grade/[grade]/page.js",
-  "/worksheet/[grade]/page": "app/worksheet/[grade]/page.js"
+  "/math/grade/[grade]/practice/page": "app/math/grade/[grade]/practice/page.js",
+  "/worksheet/[grade]/page": "app/worksheet/[grade]/page.js",
+  "/math/page": "app/math/page.js",
+  "/coming-soon/page": "app/coming-soon/page.js"
 }

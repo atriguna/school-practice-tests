@@ -8,8 +8,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function PracticePage({ params }: any) {
-  const grade = params.grade;
+export default async function PracticePage({ params }: { params: Promise<{ grade: string }> }) {
+  const { grade } = await params;
   const gradeNumber = Number(grade);
 
   if (!Number.isInteger(gradeNumber) || gradeNumber < 1 || gradeNumber > 6) {
