@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import VideoLessonsModal from '../../../components/curriculum/VideoLessonsModal';
 
+
 type SubTopic = { id: string; title: string; description?: string; hasPractice?: boolean };
 type Topic = { id: string; name: string; description?: string; subtopics: (string | SubTopic)[] };
 type Grade = { id: string; name: string; description: string; topics: Topic[] };
@@ -104,11 +105,12 @@ export default function GradeCurriculum({
             >
               Start Practice Test
             </Link>
-            <button 
-            onClick={() => window.open('https://www.mathworksheets.com/1st-grade/MathWorksheetsGrade1_9_1.pdf', '_blank')}
-            className="w-full bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 py-3 px-4 rounded-lg font-medium transition-colors cursor-pointer">
-              Download Worksheets
-            </button>
+            <Link
+              href="/worksheet"
+              className="w-full block bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 py-3 px-4 rounded-lg font-medium text-center transition-colors"
+            >
+              📘 Math Worksheet
+            </Link>
             <VideoLessonsModal
                 subtopics={grade.topics.flatMap(t =>
                     t.subtopics.map(st =>

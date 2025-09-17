@@ -14,3 +14,10 @@ export type LessonOutline = {
   objectives?: string[]; 
 };
 
+export type QuestionWorksheets = {
+  id: string;
+  question_text: string;
+  options: string[];
+  correct_answer: string;
+  explanation: string;
+}
