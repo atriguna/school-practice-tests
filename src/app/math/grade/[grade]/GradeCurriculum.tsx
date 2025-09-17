@@ -106,7 +106,7 @@ export default function GradeCurriculum({
               Start Practice Test
             </Link>
             <Link
-              href="/worksheet"
+              href={`/worksheet/${gradeNumber}`}
               className="w-full block bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 py-3 px-4 rounded-lg font-medium text-center transition-colors"
             >
               📘 Math Worksheet

@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "question_text": "What is the place value of digit 6 in the number 6,742,315?",
+    "options": ["6,000", "60,000", "600,000", "6,000,000"],
+    "correct_answer": "6,000,000",
+    "explanation": "The 6 is in the millions place, so its place value is 6,000,000."
+  },
+  {
+    "id": 2,
+    "question_text": "Round 8,946,327 to the nearest hundred thousand.",
+    "options": ["8,900,000", "9,000,000", "8,950,000", "8,946,000"],
+    "correct_answer": "8,900,000",
+    "explanation": "The hundred thousand digit is 9, followed by 4 (<5), so we round down to 8,900,000."
+  },
+  {
+    "id": 3,
+    "question_text": "What is 7,215 + 8,492?",
+    "options": ["15,607", "15,707", "15,807", "15,907"],
+    "correct_answer": "15,707",
+    "explanation": "7,215 + 8,492 = 15,707."
+  },
+  {
+    "id": 4,
+    "question_text": "Subtract: 1,204,352 − 785,419 = ?",
+    "options": ["418,933", "419,933", "420,933", "421,933"],
+    "correct_answer": "418,933",
+    "explanation": "1,204,352 − 785,419 = 418,933."
+  },
+  {
+    "id": 5,
+    "question_text": "Multiply: 642 × 37 = ?",
+    "options": ["23,754", "23,844", "23,644", "23,944"],
+    "correct_answer": "23,754",
+    "explanation": "642 × 37 = 23,754."
+  },
+  {
+    "id": 6,
+    "question_text": "Divide: 9,216 ÷ 48 = ?",
+    "options": ["181", "191", "192", "193"],
+    "correct_answer": "192",
+    "explanation": "9,216 ÷ 48 = 192."
+  },
+  {
+    "id": 7,
+    "question_text": "Simplify: 3/4 + 2/3 = ?",
+    "options": ["17/12", "13/12", "23/12", "11/12"],
+    "correct_answer": "17/12",
+    "explanation": "LCM of 4 and 3 is 12. 3/4 = 9/12, 2/3 = 8/12. Add = 17/12."
+  },
+  {
+    "id": 8,
+    "question_text": "Simplify: 7/8 − 3/10 = ?",
+    "options": ["23/40", "29/40", "31/40", "33/40"],
+    "correct_answer": "23/40",
+    "explanation": "LCM of 8 and 10 = 40. 7/8 = 35/40, 3/10 = 12/40. Subtract = 23/40."
+  },
+  {
+    "id": 9,
+    "question_text": "Simplify: 2/5 × 15/8 = ?",
+    "options": ["3/4", "5/4", "3/2", "2/3"],
+    "correct_answer": "3/4",
+    "explanation": "(2×15)/(5×8) = 30/40 = 3/4."
+  },
+  {
+    "id": 10,
+    "question_text": "Simplify: 12/15 ÷ 4/5 = ?",
+    "options": ["1", "5/4", "4/5", "2"],
+    "correct_answer": "1",
+    "explanation": "12/15 ÷ 4/5 = (12/15) × (5/4) = 60/60 = 1."
+  },
+  {
+    "id": 11,
+    "question_text": "A recipe needs 2 cups of flour and 3 cups of sugar. What is the ratio of flour to sugar?",
+    "options": ["2:3", "3:2", "1:3", "3:1"],
+    "correct_answer": "2:3",
+    "explanation": "There are 2 cups of flour and 3 cups of sugar, so ratio flour:sugar = 2:3."
+  },
+  {
+    "id": 12,
+    "question_text": "In a class of 25 students, 10 are boys. What is the proportion of boys?",
+    "options": ["2/5", "3/5", "5/2", "5/3"],
+    "correct_answer": "2/5",
+    "explanation": "10 boys out of 25 total = 10/25 = 2/5."
+  },
+  {
+    "id": 13,
+    "question_text": "Solve for x: 2x + 5 = 17.",
+    "options": ["5", "6", "7", "8"],
+    "correct_answer": "6",
+    "explanation": "2x + 5 = 17 → 2x = 12 → x = 6."
+  },
+  {
+    "id": 14,
+    "question_text": "Solve for y: 3y − 7 = 14.",
+    "options": ["5", "6", "7", "8"],
+    "correct_answer": "7",
+    "explanation": "3y − 7 = 14 → 3y = 21 → y = 7."
+  },
+  {
+    "id": 15,
+    "question_text": "Find the area of a triangle with base 12 cm and height 15 cm.",
+    "options": ["80 cm²", "90 cm²", "100 cm²", "120 cm²"],
+    "correct_answer": "90 cm²",
+    "explanation": "Area = 1/2 × base × height = 1/2 × 12 × 15 = 90 cm²."
+  },
+  {
+    "id": 16,
+    "question_text": "Find the area of a parallelogram with base 20 cm and height 8 cm.",
+    "options": ["120 cm²", "140 cm²", "150 cm²", "160 cm²"],
+    "correct_answer": "160 cm²",
+    "explanation": "Area = base × height = 20 × 8 = 160 cm²."
+  },
+  {
+    "id": 17,
+    "question_text": "Find the volume of a cube with side 6 cm.",
+    "options": ["216 cm³", "126 cm³", "216 m³", "36 cm³"],
+    "correct_answer": "216 cm³",
+    "explanation": "Volume = side³ = 6³ = 216 cm³."
+  },
+  {
+    "id": 18,
+    "question_text": "Find the volume of a cuboid with length 12 cm, width 5 cm, height 4 cm.",
+    "options": ["220 cm³", "230 cm³", "240 cm³", "250 cm³"],
+    "correct_answer": "240 cm³",
+    "explanation": "Volume = 12 × 5 × 4 = 240 cm³."
+  },
+  {
+    "id": 19,
+    "question_text": "The sum of angles in a hexagon is…?",
+    "options": ["540°", "720°", "900°", "1080°"],
+    "correct_answer": "720°",
+    "explanation": "Sum = (n − 2) × 180° = (6 − 2) × 180° = 720°."
+  },
+  {
+    "id": 20,
+    "question_text": "In a quadrilateral, one angle is 100°, another 80°, and another 120°. What is the measure of the fourth angle?",
+    "options": ["50°", "60°", "70°", "80°"],
+    "correct_answer": "60°",
+    "explanation": "Sum of quadrilateral = 360°. 100 + 80 + 120 = 300. Fourth angle = 60°."
+  },
+  {
+    "id": 21,
+    "question_text": "Which coordinate represents point A at x = −3, y = 4?",
+    "options": ["(3,4)", "(−3,−4)", "(−3,4)", "(4,−3)"],
+    "correct_answer": "(−3,4)",
+    "explanation": "Point A is (x, y) = (−3, 4)."
+  },
+  {
+    "id": 22,
+    "question_text": "Which quadrant is point (−5, −7) located?",
+    "options": ["Quadrant I", "Quadrant II", "Quadrant III", "Quadrant IV"],
+    "correct_answer": "Quadrant III",
+    "explanation": "Negative x and y = Quadrant III."
+  },
+  {
+    "id": 23,
+    "question_text": "A pie chart shows 120 students. 1/4 of them like science. How many students is that?",
+    "options": ["20", "25", "30", "40"],
+    "correct_answer": "30",
+    "explanation": "1/4 × 120 = 30 students."
+  },
+  {
+    "id": 24,
+    "question_text": "In a line graph, the temperature rose from 15°C to 27°C. What is the increase?",
+    "options": ["10°C", "11°C", "12°C", "13°C"],
+    "correct_answer": "12°C",
+    "explanation": "27 − 15 = 12°C."
+  },
+  {
+    "id": 25,
+    "question_text": "The mean of 10, 20, 30, and 40 is…?",
+    "options": ["20", "25", "30", "35"],
+    "correct_answer": "25",
+    "explanation": "Sum = 100, divide by 4 = 25."
+  },
+  {
+    "id": 26,
+    "question_text": "The probability of rolling a 6 on a fair die is…?",
+    "options": ["1/2", "1/3", "1/6", "1/4"],
+    "correct_answer": "1/6",
+    "explanation": "1 possible outcome out of 6 = 1/6."
+  },
+  {
+    "id": 27,
+    "question_text": "The probability of tossing a coin and getting heads is…?",
+    "options": ["1/2", "1/3", "1/4", "2/3"],
+    "correct_answer": "1/2",
+    "explanation": "Heads or tails = 2 outcomes. Chance of heads = 1/2."
+  },
+  {
+    "id": 28,
+    "question_text": "Solve for x: 5x = 45.",
+    "options": ["7", "8", "9", "10"],
+    "correct_answer": "9",
+    "explanation": "x = 45 ÷ 5 = 9."
+  },
+  {
+    "id": 29,
+    "question_text": "Solve for y: y/4 = 7.",
+    "options": ["21", "26", "28", "30"],
+    "correct_answer": "28",
+    "explanation": "Multiply both sides by 4 → y = 28."
+  },
+  {
+    "id": 30,
+    "question_text": "Find the ratio of 12 cm to 18 cm in simplest form.",
+    "options": ["2:3", "3:2", "6:9", "4:5"],
+    "correct_answer": "2:3",
+    "explanation": "12:18 = 12/18 = 2/3 = 2:3."
+  }
+]

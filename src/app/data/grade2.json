@@ -1,0 +1,468 @@
+[
+  {
+    "question_text": "105, 110, 115, 120, 125. These numbers are skip counting by ....",
+    "options": [
+      "5",
+      "10",
+      "15"
+    ],
+    "correct_answer": "5",
+    "explanation": "The sequence increases by 5 each time, so it is skip counting by 5.",
+    "id": "1"
+  },
+  {
+    "question_text": "The number 374 is ....",
+    "options": [
+      "Odd number",
+      "Even number",
+      "Negative number"
+    ],
+    "correct_answer": "Even number",
+    "explanation": "374 ends in 4, which is an even digit, so 374 is an even number.",
+    "id": "2"
+  },
+  {
+    "question_text": "The result of 451 - 125 is ....",
+    "options": [
+      "334",
+      "326",
+      "336"
+    ],
+    "correct_answer": "326",
+    "explanation": "451 - 125 = 326.",
+    "id": "3"
+  },
+  {
+    "question_text": "189 apples .... 194 oranges. The correct symbol to fill in the blank is ....",
+    "options": [
+      "<",
+      ">",
+      "="
+    ],
+    "correct_answer": "<",
+    "explanation": "Since 189 is less than 194, the correct symbol is '<'.",
+    "id": "4"
+  },
+  {
+    "question_text": "The number name of 31 is ....",
+    "options": [
+      "Thirty one",
+      "Three one",
+      "Three point one"
+    ],
+    "correct_answer": "Thirty one",
+    "explanation": "31 is read as 'Thirty one'.",
+    "id": "5"
+  },
+  {
+    "question_text": "Ani took 30 steps, Ami took 35 steps, and Anggi took 40 steps. What is the difference between their steps?",
+    "options": [],
+    "correct_answer": "5",
+    "explanation": "35 - 30 = 5, 40 - 35 = 5. The consistent step difference is 5.",
+    "id": "6"
+  },
+  {
+    "question_text": "The symbol of twenty five is ....",
+    "options": [
+      "25",
+      "5",
+      "15"
+    ],
+    "correct_answer": "25",
+    "explanation": "The number twenty five is written as 25.",
+    "id": "7"
+  },
+  {
+    "question_text": "101, ..., 103, ...., 105. The correct numbers to fill the blanks are ....",
+    "options": [
+      "103 and 104",
+      "102 and 104",
+      "103 and 105"
+    ],
+    "correct_answer": "102 and 104",
+    "explanation": "The sequence is consecutive numbers: 101, 102, 103, 104, 105.",
+    "id": "8"
+  },
+  {
+    "question_text": "The number name of 247 is ....",
+    "options": [
+      "Two hundred forty seven",
+      "Two four seven",
+      "Two hundred four seven"
+    ],
+    "correct_answer": "Two hundred forty seven",
+    "explanation": "247 is read as 'Two hundred forty seven'.",
+    "id": "9"
+  },
+  {
+    "question_text": "409, 317, 464, 270, 154. If arranged from largest to smallest, the order is ....",
+    "options": [
+      "409, 464, 317, 270, 154",
+      "464, 409, 270, 154, 317",
+      "464, 409, 317, 270, 154"
+    ],
+    "correct_answer": "464, 409, 317, 270, 154",
+    "explanation": "The largest is 464, followed by 409, 317, 270, and the smallest is 154.",
+    "id": "10"
+  },
+  {
+    "question_text": "Arrange these numbers from largest to smallest: 270, 169, 150, 300, 295, 264",
+    "options": [],
+    "correct_answer": "300, 295, 270, 264, 169, 150",
+    "explanation": "The correct descending order is 300 > 295 > 270 > 264 > 169 > 150.",
+    "id": "11"
+  },
+  {
+    "question_text": "1 hundred + 6 tens + .... ones = 165",
+    "options": [],
+    "correct_answer": "5 ones",
+    "explanation": "165 consists of 1 hundred, 6 tens, and 5 ones.",
+    "id": "12"
+  },
+  {
+    "question_text": "Odd numbers between 10 and 20 are ....",
+    "options": [
+      "12, 14, 16, 18",
+      "12, 13, 14, 15",
+      "11, 13, 15, 17, 19"
+    ],
+    "correct_answer": "11, 13, 15, 17, 19",
+    "explanation": "Odd numbers between 10 and 20 are 11, 13, 15, 17, and 19.",
+    "id": "13"
+  },
+  {
+    "question_text": "The result of 475 - 136 + 183 is ....",
+    "options": [
+      "532",
+      "522",
+      "512"
+    ],
+    "correct_answer": "522",
+    "explanation": "475 - 136 = 339, then 339 + 183 = 522.",
+    "id": "14"
+  },
+  {
+    "question_text": "2 odd numbers after 135 are ....",
+    "options": [
+      "136 and 137",
+      "137 and 139",
+      "136 and 138"
+    ],
+    "correct_answer": "137 and 139",
+    "explanation": "Odd numbers are those ending in 1, 3, 5, 7, or 9. After 135, the next odd numbers are 137 and 139.",
+    "id": "15"
+  },
+  {
+    "question_text": "126 = .... hundreds + .... tens + .... ones",
+    "options": [],
+    "correct_answer": "1 hundred + 2 tens + 6 ones",
+    "explanation": "126 is broken down into 1 hundred, 2 tens, and 6 ones.",
+    "id": "16"
+  },
+  {
+    "question_text": "The result of 486 - 152 - 123 is ....",
+    "options": [
+      "121",
+      "211",
+      "221"
+    ],
+    "correct_answer": "211",
+    "explanation": "486 - 152 = 334, then 334 - 123 = 211.",
+    "id": "17"
+  },
+  {
+    "question_text": "The result of 34 + 51 is ....",
+    "options": [
+      "85",
+      "86",
+      "87"
+    ],
+    "correct_answer": "85",
+    "explanation": "34 + 51 = 85.",
+    "id": "18"
+  },
+  {
+    "question_text": "Arrange these numbers from smallest to largest: 190, 145, 280, 275, 186, 130",
+    "options": [],
+    "correct_answer": "130, 145, 186, 190, 275, 280",
+    "explanation": "The correct order is 130 < 145 < 186 < 190 < 275 < 280.",
+    "id": "19"
+  },
+  {
+    "question_text": "The place value of 8 in 183 is ....",
+    "options": [
+      "Hundreds",
+      "Tens",
+      "Ones"
+    ],
+    "correct_answer": "Tens",
+    "explanation": "In 183, the digit 8 is in the tens place.",
+    "id": "20"
+  },
+  {
+    "question_text": "3 hundreds + ... tens + ... ones = 398",
+    "options": [],
+    "correct_answer": "9 tens + 8 ones",
+    "explanation": "398 consists of 3 hundreds, 9 tens, and 8 ones.",
+    "id": "21"
+  },
+  {
+    "question_text": "The number 135 is read as ....",
+    "options": [
+      "One three five",
+      "One hundred three five",
+      "One hundred thirty five"
+    ],
+    "correct_answer": "One hundred thirty five",
+    "explanation": "135 is read as 'One hundred thirty five'.",
+    "id": "22"
+  },
+  {
+    "question_text": "The symbol for 'two hundred seventy five' is ....",
+    "options": [],
+    "correct_answer": "275",
+    "explanation": "Two hundred seventy five is written as 275.",
+    "id": "23"
+  },
+  {
+    "question_text": "How do you read the number 361?",
+    "options": [],
+    "correct_answer": "Three hundred sixty one",
+    "explanation": "361 is read as 'Three hundred sixty one'.",
+    "id": "24"
+  },
+  {
+    "question_text": "Arrange these numbers from largest to smallest: 108, 142, 220, 277, 188, 197",
+    "options": [],
+    "correct_answer": "277, 220, 197, 188, 142, 108",
+    "explanation": "The correct descending order is 277 > 220 > 197 > 188 > 142 > 108.",
+    "id": "25"
+  },
+  {
+    "question_text": "342 = ... hundreds + ... tens + ... ones",
+    "options": [],
+    "correct_answer": "3 hundreds + 4 tens + 2 ones",
+    "explanation": "342 consists of 3 hundreds, 4 tens, and 2 ones.",
+    "id": "26"
+  },
+  {
+    "question_text": "254 = ... hundreds + ... tens + ... ones",
+    "options": [],
+    "correct_answer": "2 hundreds + 5 tens + 4 ones",
+    "explanation": "254 consists of 2 hundreds, 5 tens, and 4 ones.",
+    "id": "27"
+  },
+  {
+    "question_text": "Ephine finished in position 135 and Herma in position 139 in a marathon. What is the number gap between them?",
+    "options": [],
+    "correct_answer": "4",
+    "explanation": "We subtract 139 - 135 = 4.",
+    "id": "28"
+  },
+  {
+    "question_text": "How do you read the number 145?",
+    "options": [],
+    "correct_answer": "One hundred forty five",
+    "explanation": "145 is read as 'One hundred forty five'.",
+    "id": "29"
+  },
+  {
+    "question_text": "The place value of 9 in 197 is ....",
+    "options": [
+      "Hundreds",
+      "Tens",
+      "Ones"
+    ],
+    "correct_answer": "Tens",
+    "explanation": "In 197, the digit 9 is in the tens place.",
+    "id": "30"
+  },
+  {
+    "question_text": "284, 286, ...., 290, 292. The correct number to fill the blank is ....",
+    "options": [
+      "286",
+      "287",
+      "288"
+    ],
+    "correct_answer": "288",
+    "explanation": "The sequence increases by 2: 284, 286, 288, 290, 292.",
+    "id": "31"
+  },
+  {
+    "question_text": "The result of 400 + 50 + 9 is ....",
+    "options": [
+      "459",
+      "159",
+      "359"
+    ],
+    "correct_answer": "459",
+    "explanation": "400 + 50 + 9 = 459.",
+    "id": "32"
+  },
+  {
+    "question_text": "How do you read the number 239?",
+    "options": [],
+    "correct_answer": "Two hundred thirty nine",
+    "explanation": "239 is read as 'Two hundred thirty nine'.",
+    "id": "33"
+  },
+  {
+    "question_text": "139 = ... hundreds + ... tens + ... ones",
+    "options": [],
+    "correct_answer": "1 hundred + 3 tens + 9 ones",
+    "explanation": "139 consists of 1 hundred, 3 tens, and 9 ones.",
+    "id": "34"
+  },
+  {
+    "question_text": "2 numbers before 259 are ....",
+    "options": [
+      "256 and 258",
+      "257 and 258",
+      "257 and 250"
+    ],
+    "correct_answer": "257 and 258",
+    "explanation": "The two numbers just before 259 are 257 and 258.",
+    "id": "35"
+  },
+  {
+    "question_text": "The place value of 1 in 128 is ....",
+    "options": [
+      "Hundreds",
+      "Tens",
+      "Ones"
+    ],
+    "correct_answer": "Hundreds",
+    "explanation": "In 128, the digit 1 is in the hundreds place.",
+    "id": "36"
+  },
+  {
+    "question_text": "The tens place value in 237 is ....",
+    "options": [
+      "2",
+      "3",
+      "7"
+    ],
+    "correct_answer": "3",
+    "explanation": "In 237, the tens place is 3.",
+    "id": "37"
+  },
+  {
+    "question_text": "129, 142, 110, 187, 164. If arranged from smallest to largest, the order is ....",
+    "options": [
+      "110, 142, 129, 164, 187",
+      "110, 129, 142, 187, 164",
+      "110, 129, 142, 164, 187"
+    ],
+    "correct_answer": "110, 129, 142, 164, 187",
+    "explanation": "Ordering from smallest to largest gives 110, 129, 142, 164, and 187.",
+    "id": "38"
+  },
+  {
+    "question_text": "Wendy raised 56 ducks, 135 chickens, and 110 geese. How many animals does Wendy have in total?",
+    "options": [],
+    "correct_answer": "301 animals",
+    "explanation": "We add 56 + 135 + 110 = 301 animals.",
+    "id": "39"
+  },
+  {
+    "question_text": "How do you read the number 298?",
+    "options": [],
+    "correct_answer": "Two hundred ninety eight",
+    "explanation": "298 is read as 'Two hundred ninety eight'.",
+    "id": "40"
+  },
+  {
+    "question_text": "Arrange these numbers from smallest to largest: 255, 190, 150, 168, 237, 193",
+    "options": [],
+    "correct_answer": "150, 168, 190, 193, 237, 255",
+    "explanation": "The correct order is 150 < 168 < 190 < 193 < 237 < 255.",
+    "id": "41"
+  },
+  {
+    "question_text": "125 and 367 are odd numbers because their last digits are ...",
+    "options": [
+      "1 and 7",
+      "5 and 7",
+      "1 and 3"
+    ],
+    "correct_answer": "5 and 7",
+    "explanation": "A number is odd if its last digit is 1, 3, 5, 7, or 9. 125 ends in 5, and 367 ends in 7.",
+    "id": "42"
+  },
+  {
+    "question_text": "The place value of 7 in 278 is ....",
+    "options": [
+      "Hundreds",
+      "Tens",
+      "Ones"
+    ],
+    "correct_answer": "Tens",
+    "explanation": "In 278, the digit 7 is in the tens place.",
+    "id": "43"
+  },
+  {
+    "question_text": "130 .... 110. The correct comparison sign is ....",
+    "options": [
+      "=",
+      "<",
+      ">"
+    ],
+    "correct_answer": ">",
+    "explanation": "130 is greater than 110, so the correct sign is '>'.",
+    "id": "44"
+  },
+  {
+    "question_text": "Pak Komar harvested 320 corns, then added 60 corns from Mr. Agus' harvest. How many corns does Mr. Komar have in total?",
+    "options": [],
+    "correct_answer": "380 corns",
+    "explanation": "We add 320 + 60 = 380 corns.",
+    "id": "45"
+  },
+  {
+    "question_text": "Nindy had 340 dolls in her shop. If 200 dolls were sold, how many dolls remain?",
+    "options": [],
+    "correct_answer": "140 dolls",
+    "explanation": "We subtract 340 - 200 = 140 dolls.",
+    "id": "46"
+  },
+  {
+    "question_text": "How do you read the number 289?",
+    "options": [],
+    "correct_answer": "Two hundred eighty nine",
+    "explanation": "289 is read as 'Two hundred eighty nine'.",
+    "id": "47"
+  },
+  {
+    "question_text": "The result of 432 - 115 is ....",
+    "options": [
+      "327",
+      "323",
+      "317"
+    ],
+    "correct_answer": "317",
+    "explanation": "432 - 115 = 317.",
+    "id": "48"
+  },
+  {
+    "question_text": "Two odd numbers after 134 are ....",
+    "options": [
+      "135 and 137",
+      "135 and 136",
+      "133 and 131"
+    ],
+    "correct_answer": "135 and 137",
+    "explanation": "After 134, the next odd numbers are 135 and 137.",
+    "id": "49"
+  },
+  {
+    "question_text": "124, ... , 128, 130, 132. The correct number to fill in the blank is ....",
+    "options": [
+      "125",
+      "127",
+      "126"
+    ],
+    "correct_answer": "126",
+    "explanation": "The sequence increases by 2: 124, 126, 128, 130, 132.",
+    "id": "50"
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "question_text": "What is the place value of digit 5 in the number 785,432?",
+    "options": ["5,000", "50,000", "500,000", "500"],
+    "correct_answer": "5,000",
+    "explanation": "The digit 5 is in the thousands place, so its value is 5,000."
+  },
+  {
+    "id": 2,
+    "question_text": "What is the value of digit 2 in the number 620,894?",
+    "options": ["200", "2,000", "20,000", "200,000"],
+    "correct_answer": "20,000",
+    "explanation": "The digit 2 is in the ten-thousands place, so its value is 20,000."
+  },
+  {
+    "id": 3,
+    "question_text": "Add: 45,672 + 28,459 = ?",
+    "options": ["74,121", "74,131", "74,141", "74,151"],
+    "correct_answer": "74,131",
+    "explanation": "45,672 + 28,459 = 74,131."
+  },
+  {
+    "id": 4,
+    "question_text": "Subtract: 92,350 - 47,285 = ?",
+    "options": ["45,055", "45,065", "45,075", "45,085"],
+    "correct_answer": "45,065",
+    "explanation": "92,350 - 47,285 = 45,065."
+  },
+  {
+    "id": 5,
+    "question_text": "Multiply: 356 × 24 = ?",
+    "options": ["8,534", "8,544", "8,634", "8,444"],
+    "correct_answer": "8,544",
+    "explanation": "356 × 24 = 8,544."
+  },
+  {
+    "id": 6,
+    "question_text": "Divide: 7,452 ÷ 6 = ?",
+    "options": ["1,225", "1,232", "1,242", "1,252"],
+    "correct_answer": "1,242",
+    "explanation": "7,452 ÷ 6 = 1,242."
+  },
+  {
+    "id": 7,
+    "question_text": "Which fraction is equal to 3/4?",
+    "options": ["6/8", "9/12", "12/16", "All of these"],
+    "correct_answer": "All of these",
+    "explanation": "6/8, 9/12, and 12/16 are all equivalent to 3/4."
+  },
+  {
+    "id": 8,
+    "question_text": "What is 0.75 written as a fraction?",
+    "options": ["3/5", "3/4", "7/10", "2/3"],
+    "correct_answer": "3/4",
+    "explanation": "0.75 = 75/100 = 3/4."
+  },
+  {
+    "id": 9,
+    "question_text": "What is 25% of 480?",
+    "options": ["110", "115", "120", "125"],
+    "correct_answer": "120",
+    "explanation": "25% of 480 = 480 × 0.25 = 120."
+  },
+  {
+    "id": 10,
+    "question_text": "Convert 3 km into meters.",
+    "options": ["30 m", "300 m", "3,000 m", "30,000 m"],
+    "correct_answer": "3,000 m",
+    "explanation": "1 km = 1,000 m, so 3 km = 3,000 m."
+  },
+  {
+    "id": 11,
+    "question_text": "The length of a rectangle is 25 cm and its width is 12 cm. What is its perimeter?",
+    "options": ["50 cm", "60 cm", "70 cm", "74 cm"],
+    "correct_answer": "74 cm",
+    "explanation": "Perimeter = 2 × (25 + 12) = 74 cm."
+  },
+  {
+    "id": 12,
+    "question_text": "The length of a rectangle is 20 cm and width is 15 cm. What is its area?",
+    "options": ["200 cm²", "250 cm²", "300 cm²", "400 cm²"],
+    "correct_answer": "300 cm²",
+    "explanation": "Area = 20 × 15 = 300 cm²."
+  },
+  {
+    "id": 13,
+    "question_text": "What is the size of a right angle?",
+    "options": ["30°", "45°", "60°", "90°"],
+    "correct_answer": "90°",
+    "explanation": "A right angle measures 90°."
+  },
+  {
+    "id": 14,
+    "question_text": "If an angle is 40°, what is its complement?",
+    "options": ["40°", "50°", "60°", "70°"],
+    "correct_answer": "50°",
+    "explanation": "Complementary angles add to 90°. 90° - 40° = 50°."
+  },
+  {
+    "id": 15,
+    "question_text": "Plot the point (4, 3) on a coordinate grid. In which quadrant does it lie?",
+    "options": ["I", "II", "III", "IV"],
+    "correct_answer": "I",
+    "explanation": "Both x and y are positive, so (4, 3) lies in Quadrant I."
+  },
+  {
+    "id": 16,
+    "question_text": "The numbers 12, 15, 10, 13, 20 are given. What is their mean?",
+    "options": ["13", "14", "15", "16"],
+    "correct_answer": "14",
+    "explanation": "Sum = 12+15+10+13+20 = 70. Mean = 70 ÷ 5 = 14."
+  },
+  {
+    "id": 17,
+    "question_text": "What is 4,682 rounded to the nearest hundred?",
+    "options": ["4,600", "4,680", "4,700", "4,800"],
+    "correct_answer": "4,700",
+    "explanation": "The tens digit is 8 (≥5), so round up to 4,700."
+  },
+  {
+    "id": 18,
+    "question_text": "What is 58,294 rounded to the nearest thousand?",
+    "options": ["58,000", "58,200", "58,300", "59,000"],
+    "correct_answer": "58,000",
+    "explanation": "The hundreds digit is 2 (<5), so round down to 58,000."
+  },
+  {
+    "id": 19,
+    "question_text": "Solve: 8 × (25 + 15) = ?",
+    "options": ["300", "320", "340", "400"],
+    "correct_answer": "320",
+    "explanation": "8 × (25 + 15) = 8 × 40 = 320."
+  },
+  {
+    "id": 20,
+    "question_text": "If 96 ÷ 8 = 12, then 960 ÷ 8 = ?",
+    "options": ["100", "110", "120", "130"],
+    "correct_answer": "120",
+    "explanation": "Adding a zero makes the answer 120."
+  },
+  {
+    "id": 21,
+    "question_text": "Which decimal is equal to 3/5?",
+    "options": ["0.25", "0.50", "0.60", "0.75"],
+    "correct_answer": "0.60",
+    "explanation": "3 ÷ 5 = 0.60."
+  },
+  {
+    "id": 22,
+    "question_text": "A box has a volume of 2 m × 3 m × 4 m. What is the volume?",
+    "options": ["18 m³", "20 m³", "22 m³", "24 m³"],
+    "correct_answer": "24 m³",
+    "explanation": "Volume = length × width × height = 2 × 3 × 4 = 24 m³."
+  },
+  {
+    "id": 23,
+    "question_text": "Convert 2.5 hours into minutes.",
+    "options": ["120 min", "130 min", "140 min", "150 min"],
+    "correct_answer": "150 min",
+    "explanation": "2.5 hours = 2.5 × 60 = 150 minutes."
+  },
+  {
+    "id": 24,
+    "question_text": "What is the perimeter of a square with side length 18 cm?",
+    "options": ["36 cm", "54 cm", "72 cm", "81 cm"],
+    "correct_answer": "72 cm",
+    "explanation": "Perimeter = 4 × side = 4 × 18 = 72 cm."
+  },
+  {
+    "id": 25,
+    "question_text": "Which of the following is the largest fraction?",
+    "options": ["2/3", "3/5", "4/7", "5/9"],
+    "correct_answer": "2/3",
+    "explanation": "2/3 ≈ 0.67, which is larger than 3/5 (0.6), 4/7 (~0.57), 5/9 (~0.55)."
+  },
+  {
+    "id": 26,
+    "question_text": "A shopkeeper sold 356 pencils on Monday and 289 pencils on Tuesday. How many pencils were sold in total?",
+    "options": ["635", "645", "655", "665"],
+    "correct_answer": "645",
+    "explanation": "356 + 289 = 645 pencils."
+  },
+  {
+    "id": 27,
+    "question_text": "An angle measures 120°. What is its supplement?",
+    "options": ["50°", "60°", "70°", "80°"],
+    "correct_answer": "60°",
+    "explanation": "Supplementary angles add to 180°. 180° - 120° = 60°."
+  },
+  {
+    "id": 28,
+    "question_text": "What is the product of 123 × 12?",
+    "options": ["1,466", "1,476", "1,486", "1,496"],
+    "correct_answer": "1,476",
+    "explanation": "123 × 12 = 1,476."
+  },
+  {
+    "id": 29,
+    "question_text": "If the average of 4 numbers is 12, what is their total sum?",
+    "options": ["44", "46", "48", "50"],
+    "correct_answer": "48",
+    "explanation": "Average = sum ÷ count. 12 × 4 = 48."
+  },
+  {
+    "id": 30,
+    "question_text": "A train travels 90 km in 1.5 hours. What is its speed?",
+    "options": ["40 km/h", "50 km/h", "60 km/h", "70 km/h"],
+    "correct_answer": "60 km/h",
+    "explanation": "Speed = distance ÷ time = 90 ÷ 1.5 = 60 km/h."
+  }
+]

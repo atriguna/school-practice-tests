@@ -2,47 +2,44 @@
 
 import { useState } from "react";
 import QuestionCard from "./QuestionCard";
-import questionsData from "@/app/data/bankquestion.json";
-import { QuestionWorksheets } from "@/app/data/types";
+import { QuestionWorksheets } from "@/app/data/types"
 
-const sampleQuestions: QuestionWorksheets[] = questionsData;
-
-export default function Worksheet() {
+export default function Worksheet({ questions }: { questions: QuestionWorksheets[] }) {
   const [page, setPage] = useState(1);
   const limit = 5;
 
   const startIndex = (page - 1) * limit;
-  const currentQuestions = sampleQuestions.slice(startIndex, startIndex + limit);
-  const totalPages = Math.ceil(sampleQuestions.length / limit);
+  const currentQuestions = questions.slice(startIndex, startIndex + limit);
+  const totalPages = Math.ceil(questions.length / limit);
 
-  const progress = Math.min(page * limit, sampleQuestions.length);
+  const progress = Math.min(page * limit, questions.length);
 
   return (
-    <div className="max-w-3xl mx-auto space-y-6">
-      {/* Progress bar + counter */}
+    <div className="max-w-3xl mx-auto space-y-6 ">
+      {/* Progress bar */}
       <div className="md:-ml-40">
         <div className="w-full bg-gray-200 rounded-full h-3">
           <div
             className="bg-blue-500 h-3 rounded-full transition-all"
-            style={{ width: `${(progress / sampleQuestions.length) * 100}%` }}
+            style={{ width: `${(progress / questions.length) * 100}%` }}
           />
         </div>
         <p className="text-sm text-gray-600 font-medium mt-2">
-          {progress} / {sampleQuestions.length} questions viewed
+          {progress} / {questions.length} questions viewed
         </p>
       </div>
 
-      {/* Render soal */}
+      {/* Render questions */}
       {currentQuestions.map((q) => (
         <QuestionCard key={q.id} question={q} />
       ))}
 
-      {/* Pagination controls */}
+      {/* Pagination */}
       <div className="flex justify-between items-center mt-6">
         <button
           onClick={() => setPage((p) => Math.max(p - 1, 1))}
           disabled={page === 1}
-          className={`md:-ml-40 py-2 px-4 rounded-lg border text-gray-800 ${
+          className={`md:-ml-40 px-4 py-2 rounded-lg border text-gray-600 ${
             page === 1
               ? "bg-gray-200 text-gray-500 cursor-not-allowed"
               : "bg-white border-gray-300 hover:bg-gray-50"
@@ -58,7 +55,7 @@ export default function Worksheet() {
         <button
           onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
           disabled={page === totalPages}
-          className={`px-4 py-2 rounded-lg border text-gray-800 ${
+          className={`px-4 py-2 rounded-lg border text-gray-600 ${
             page === totalPages
               ? "bg-gray-200 text-gray-500 cursor-not-allowed"
               : "bg-white border-gray-300 hover:bg-gray-50"

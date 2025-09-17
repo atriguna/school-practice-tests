@@ -1,6 +1,5 @@
 {
-  "/math/grade/[grade]/page": "app/math/grade/[grade]/page.js",
-  "/worksheet/page": "app/worksheet/page.js",
   "/math/grade/[grade]/practice/page": "app/math/grade/[grade]/practice/page.js",
-  "/math/page": "app/math/page.js"
+  "/math/grade/[grade]/page": "app/math/grade/[grade]/page.js",
+  "/worksheet/[grade]/page": "app/worksheet/[grade]/page.js"
 }

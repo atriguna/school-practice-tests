@@ -6,16 +6,6 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/math/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/math/page.js"
-    ],
     "/math/grade/[grade]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -26,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/math/grade/[grade]/practice/page.js"
     ],
-    "/worksheet/page": [
+    "/worksheet/[grade]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/worksheet/page.js"
+      "static/chunks/app/worksheet/[grade]/page.js"
     ]
   }
 }

@@ -1,0 +1,772 @@
+[
+    {
+      "id": "1",
+      "question_text": "Rara bought 6 packs of plastic bags, then bought 7 more. How many packs of plastic bags did Rara buy in total?",
+      "options": [
+        "13 packs",
+        "14 packs",
+        "15 packs"
+      ],
+      "correct_answer": "13 packs",
+      "explanation": "Rara had 6 packs. Add 7 more. 6 + 7 = 13. So, the total is 13 packs."
+    },
+    {
+      "id": "2",
+      "question_text": "Nunu had 1 pen, then Nino and Nani gave Nunu 12 more pens. How many pens does Nunu have now?",
+      "options": [
+        "11 pens",
+        "12 pens",
+        "13 pens"
+      ],
+      "correct_answer": "13 pens",
+      "explanation": "Start with 1 pen. Add 12. 1 + 12 = 13. So, Nunu has 13 pens."
+    },
+    {
+      "id": "3",
+      "question_text": "Chan sold 10 small bags and 13 big bags. How many bags did Chan sell in total?",
+      "options": [
+        "21 bags",
+        "22 bags",
+        "23 bags"
+      ],
+      "correct_answer": "23 bags",
+      "explanation": "Chan sold 10 + 13 bags. 10 + 13 = 23. So, 23 bags in total."
+    },
+    {
+      "id": "4",
+      "question_text": "Mrs. Halimah washed 9 shirts and 9 pants. How many clothes did she wash in total?",
+      "options": [
+        "16 clothes",
+        "17 clothes",
+        "18 clothes"
+      ],
+      "correct_answer": "18 clothes",
+      "explanation": "She washed 9 + 9 = 18 clothes."
+    },
+    {
+      "id": "5",
+      "question_text": "Dila had 15 hair ties, then Gita added 5 more. How many hair ties do Dila and Gita have together?",
+      "options": [
+        "20 hair ties",
+        "21 hair ties",
+        "22 hair ties"
+      ],
+      "correct_answer": "20 hair ties",
+      "explanation": "15 + 5 = 20 hair ties."
+    },
+    {
+      "id": "6",
+      "question_text": "Nanda had 3 ping pong balls, and Nandir had 8 ping pong balls. If combined, how many balls in total?",
+      "options": [
+        "9 balls",
+        "10 balls",
+        "11 balls"
+      ],
+      "correct_answer": "11 balls",
+      "explanation": "3 + 8 = 11 balls."
+    },
+    {
+      "id": "7",
+      "question_text": "Yayat had 14 baby goats, 3 died. How many left?",
+      "options": [
+        "11 goats",
+        "12 goats",
+        "14 goats"
+      ],
+      "correct_answer": "11 goats",
+      "explanation": "14 - 3 = 11 goats left."
+    },
+    {
+      "id": "8",
+      "question_text": "Mother bought 10 garlic cloves, 2 used. How many left?",
+      "options": [
+        "6 cloves",
+        "7 cloves",
+        "8 cloves"
+      ],
+      "correct_answer": "8 cloves",
+      "explanation": "10 - 2 = 8 cloves left."
+    },
+    {
+      "id": "9",
+      "question_text": "Cinta bought 10 breads, gave 4 to Dinda, rest to Adit. How many for Adit?",
+      "options": [
+        "4 breads",
+        "5 breads",
+        "6 breads"
+      ],
+      "correct_answer": "6 breads",
+      "explanation": "10 - 4 = 6 breads."
+    },
+    {
+      "id": "10",
+      "question_text": "Mrs. Dina had 13 shoes, sold 8. How many left to sell?",
+      "options": [
+        "4",
+        "5",
+        "6"
+      ],
+      "correct_answer": "5",
+      "explanation": "13 - 8 = 5 shoes left."
+    },
+    {
+      "id": "11",
+      "question_text": "Ami put 6 candies in bag, added 1 more from pocket. How many now?",
+      "options": [
+        "6",
+        "7",
+        "8"
+      ],
+      "correct_answer": "7",
+      "explanation": "6 + 1 = 7 candies."
+    },
+    {
+      "id": "12",
+      "question_text": "Didit bought 12 candies, gave 6 to Abi. How many left?",
+      "options": [
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_answer": "6",
+      "explanation": "12 - 6 = 6 candies."
+    },
+    {
+      "id": "13",
+      "question_text": "Lili had 10 chocolates, ate 3. How many left?",
+      "options": [
+        "6",
+        "7",
+        "8"
+      ],
+      "correct_answer": "7",
+      "explanation": "10 - 3 = 7 chocolates left."
+    },
+    {
+      "id": "14",
+      "question_text": "Mother bought 6 jars cookies, gave 2 to Grandpa, 2 to Uncle. How many left?",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct_answer": "2",
+      "explanation": "6 - 2 - 2 = 2 jars left."
+    },
+    {
+      "id": "15",
+      "question_text": "Grandpa bought 3 ducks, then 7 more. How many total?",
+      "options": [
+        "9",
+        "10",
+        "11"
+      ],
+      "correct_answer": "10",
+      "explanation": "3 + 7 = 10 ducks."
+    },
+    {
+      "id": "16",
+      "question_text": "Didi collected 6 bamboos, Leni added 4. Total?",
+      "options": [
+        "8",
+        "9",
+        "10"
+      ],
+      "correct_answer": "10",
+      "explanation": "6 + 4 = 10 bamboos."
+    },
+    {
+      "id": "17",
+      "question_text": "Amir bought 4 watches, Lila gave 1 more. Total?",
+      "options": [
+        "4",
+        "5",
+        "6"
+      ],
+      "correct_answer": "5",
+      "explanation": "4 + 1 = 5 watches."
+    },
+    {
+      "id": "18",
+      "question_text": "Mr. Untung sold 15 silk fabrics, then 2 more. Total?",
+      "options": [
+        "16",
+        "17",
+        "18"
+      ],
+      "correct_answer": "17",
+      "explanation": "15 + 2 = 17 fabrics."
+    },
+    {
+      "id": "19",
+      "question_text": "Deni\u2019s car 4 wheels, Tatu\u2019s 4, Karin\u2019s 4. Total wheels?",
+      "options": [
+        "10",
+        "12",
+        "14"
+      ],
+      "correct_answer": "12",
+      "explanation": "4 + 4 + 4 = 12 wheels."
+    },
+    {
+      "id": "20",
+      "question_text": "Dina had 3 baskets apples: 8,7,4. Total apples?",
+      "options": [
+        "18",
+        "19",
+        "20"
+      ],
+      "correct_answer": "19",
+      "explanation": "8 + 7 + 4 = 19 apples."
+    },
+    {
+      "id": "21",
+      "question_text": "The symbol for the number thirteen is\u2026.",
+      "options": [
+        "11",
+        "12",
+        "13"
+      ],
+      "correct_answer": "13",
+      "explanation": "Counting after 12 comes 13. Symbol is 13."
+    },
+    {
+      "id": "22",
+      "question_text": "7 + 11 = \u2026.",
+      "options": [
+        "18",
+        "19",
+        "17"
+      ],
+      "correct_answer": "18",
+      "explanation": "Add 7 + 11 = 18."
+    },
+    {
+      "id": "23",
+      "question_text": "20 - 4 = \u2026.",
+      "options": [
+        "17",
+        "16",
+        "15"
+      ],
+      "correct_answer": "16",
+      "explanation": "Subtract 20 - 4 = 16."
+    },
+    {
+      "id": "24",
+      "question_text": "8 + 9 + 5 = \u2026.",
+      "options": [
+        "18",
+        "20",
+        "22"
+      ],
+      "correct_answer": "22",
+      "explanation": "8 + 9 = 17, 17 + 5 = 22."
+    },
+    {
+      "id": "25",
+      "question_text": "Today is Monday. Yesterday was\u2026.",
+      "options": [
+        "Saturday",
+        "Tuesday",
+        "Sunday"
+      ],
+      "correct_answer": "Sunday",
+      "explanation": "The day before Monday is Sunday."
+    },
+    {
+      "id": "26",
+      "question_text": "The symbol for thirty-six is\u2026.",
+      "options": [
+        "27",
+        "36",
+        "48"
+      ],
+      "correct_answer": "36",
+      "explanation": "Thirty-six is written as 36."
+    },
+    {
+      "id": "27",
+      "question_text": "The symbol for forty is\u2026.",
+      "options": [
+        "14",
+        "24",
+        "40"
+      ],
+      "correct_answer": "40",
+      "explanation": "Forty is written as 40."
+    },
+    {
+      "id": "28",
+      "question_text": "The number 28 is read as\u2026.",
+      "options": [
+        "Eighteen",
+        "Twenty-eight",
+        "Thirty-eight"
+      ],
+      "correct_answer": "Twenty-eight",
+      "explanation": "28 = twenty-eight."
+    },
+    {
+      "id": "29",
+      "question_text": "Order from smallest to largest\u2026.",
+      "options": [
+        "49 22 35 30",
+        "22 30 35 49",
+        "30 35 22 49"
+      ],
+      "correct_answer": "22 30 35 49",
+      "explanation": "Smallest to biggest is 22,30,35,49."
+    },
+    {
+      "id": "30",
+      "question_text": "33 = 3 tens + \u2026 ones",
+      "options": [
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_answer": "3",
+      "explanation": "33 = 30 + 3. So 3 ones."
+    },
+    {
+      "id": "31",
+      "question_text": "30 + 20 = \u2026.",
+      "options": [
+        "45",
+        "60",
+        "50"
+      ],
+      "correct_answer": "50",
+      "explanation": "30 + 20 = 50."
+    },
+    {
+      "id": "32",
+      "question_text": "40 - 30 = \u2026.",
+      "options": [
+        "10",
+        "20",
+        "30"
+      ],
+      "correct_answer": "10",
+      "explanation": "40 - 30 = 10."
+    },
+    {
+      "id": "33",
+      "question_text": "50 - 25 = \u2026.",
+      "options": [
+        "20",
+        "30",
+        "25"
+      ],
+      "correct_answer": "25",
+      "explanation": "50 - 25 = 25."
+    },
+    {
+      "id": "34",
+      "question_text": "43 + 17 = \u2026.",
+      "options": [
+        "50",
+        "60",
+        "70"
+      ],
+      "correct_answer": "60",
+      "explanation": "43 + 17 = 60."
+    },
+    {
+      "id": "35",
+      "question_text": "58 = \u2026 tens + 8 ones",
+      "options": [
+        "5",
+        "8",
+        "2"
+      ],
+      "correct_answer": "5",
+      "explanation": "58 = 50 (5 tens) + 8."
+    },
+    {
+      "id": "36",
+      "question_text": "22 + 28 = \u2026.",
+      "options": [
+        "30",
+        "40",
+        "50"
+      ],
+      "correct_answer": "50",
+      "explanation": "22 + 28 = 50."
+    },
+    {
+      "id": "37",
+      "question_text": "60 - 37 = \u2026.",
+      "options": [
+        "22",
+        "23",
+        "24"
+      ],
+      "correct_answer": "23",
+      "explanation": "60 - 37 = 23."
+    },
+    {
+      "id": "38",
+      "question_text": "Near and far are used to describe\u2026.",
+      "options": [
+        "Distance",
+        "Length",
+        "Weight"
+      ],
+      "correct_answer": "Distance",
+      "explanation": "Near and far describe distance."
+    },
+    {
+      "id": "39",
+      "question_text": "The number 44 is read as\u2026.",
+      "options": [
+        "Forty-three",
+        "Forty-four",
+        "Forty-five"
+      ],
+      "correct_answer": "Forty-four",
+      "explanation": "44 is forty-four."
+    },
+    {
+      "id": "40",
+      "question_text": "Twenty-eight is written as\u2026.",
+      "options": [
+        "38",
+        "28",
+        "18"
+      ],
+      "correct_answer": "28",
+      "explanation": "Twenty-eight = 28."
+    },
+    {
+      "id": "41",
+      "question_text": "24 + 14 = \u2026.",
+      "options": [
+        "36",
+        "37",
+        "38"
+      ],
+      "correct_answer": "38",
+      "explanation": "24 + 14 = 38."
+    },
+    {
+      "id": "42",
+      "question_text": "50 - 12 = \u2026.",
+      "options": [
+        "36",
+        "37",
+        "38"
+      ],
+      "correct_answer": "38",
+      "explanation": "50 - 12 = 38."
+    },
+    {
+      "id": "43",
+      "question_text": "The digit 5 in 95 represents\u2026.",
+      "options": [
+        "Ones",
+        "Tens",
+        "Hundreds"
+      ],
+      "correct_answer": "Ones",
+      "explanation": "95 has 5 in ones place."
+    },
+    {
+      "id": "44",
+      "question_text": "6 tens + 2 ones = \u2026.",
+      "options": [
+        "26",
+        "62",
+        "8"
+      ],
+      "correct_answer": "62",
+      "explanation": "6 tens = 60, plus 2 = 62."
+    },
+    {
+      "id": "45",
+      "question_text": "\u2026 + 29 = 29 + 18",
+      "options": [
+        "18",
+        "29",
+        "0"
+      ],
+      "correct_answer": "18",
+      "explanation": "By commutative property: 18+29=29+18."
+    },
+    {
+      "id": "46",
+      "question_text": "45 - 20 = \u2026.",
+      "options": [
+        "23",
+        "25",
+        "15"
+      ],
+      "correct_answer": "25",
+      "explanation": "45 - 20 = 25."
+    },
+    {
+      "id": "47",
+      "question_text": "Mother bought 19 eggs. 7 broke. How many left?",
+      "options": [
+        "10",
+        "9",
+        "12"
+      ],
+      "correct_answer": "12",
+      "explanation": "19 - 7 = 12 eggs left."
+    },
+    {
+      "id": "48",
+      "question_text": "A sedan has 4 wheels, a truck 6 wheels. Total?",
+      "options": [
+        "10",
+        "12",
+        "8"
+      ],
+      "correct_answer": "10",
+      "explanation": "4 + 6 = 10 wheels."
+    },
+    {
+      "id": "49",
+      "question_text": "82 = 80 + \u2026.",
+      "options": [
+        "12",
+        "2",
+        "20"
+      ],
+      "correct_answer": "2",
+      "explanation": "82 = 80 + 2."
+    },
+    {
+      "id": "50",
+      "question_text": "The number 99 is read as\u2026.",
+      "options": [
+        "Ninety-nine",
+        "Nine-nine",
+        "Ninety-one"
+      ],
+      "correct_answer": "Ninety-nine",
+      "explanation": "99 = ninety-nine."
+    },
+    {
+      "id": "51",
+      "question_text": "Mother had 4 mangoes, then bought 3 more. Total?",
+      "options": [
+        "6",
+        "7",
+        "8"
+      ],
+      "correct_answer": "7",
+      "explanation": "4 + 3 = 7 mangoes."
+    },
+    {
+      "id": "52",
+      "question_text": "5 + 2 = \u2026.",
+      "options": [
+        "6",
+        "7",
+        "8"
+      ],
+      "correct_answer": "7",
+      "explanation": "5 + 2 = 7."
+    },
+    {
+      "id": "53",
+      "question_text": "There were 9 rabbits, 3 left. How many remain?",
+      "options": [
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_answer": "6",
+      "explanation": "9 - 3 = 6 rabbits."
+    },
+    {
+      "id": "54",
+      "question_text": "10 - 4 = \u2026.",
+      "options": [
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_answer": "6",
+      "explanation": "10 - 4 = 6."
+    },
+    {
+      "id": "55",
+      "question_text": "Which number is greater than 12?",
+      "options": [
+        "10",
+        "11",
+        "13"
+      ],
+      "correct_answer": "13",
+      "explanation": "13 > 12."
+    },
+    {
+      "id": "56",
+      "question_text": "Ani had 8 candies, gave 2 to her sister. How many now?",
+      "options": [
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_answer": "6",
+      "explanation": "8 - 2 = 6 candies."
+    },
+    {
+      "id": "57",
+      "question_text": "2 + 7 = \u2026.",
+      "options": [
+        "8",
+        "9",
+        "10"
+      ],
+      "correct_answer": "9",
+      "explanation": "2 + 7 = 9."
+    },
+    {
+      "id": "58",
+      "question_text": "A table has 4 legs. 3 tables = \u2026. legs.",
+      "options": [
+        "12",
+        "13",
+        "14"
+      ],
+      "correct_answer": "12",
+      "explanation": "3 \u00d7 4 = 12 legs."
+    },
+    {
+      "id": "59",
+      "question_text": "15 - 5 = \u2026.",
+      "options": [
+        "9",
+        "10",
+        "11"
+      ],
+      "correct_answer": "10",
+      "explanation": "15 - 5 = 10."
+    },
+    {
+      "id": "60",
+      "question_text": "Father bought 20 eggs, 8 cooked. How many left?",
+      "options": [
+        "10",
+        "11",
+        "12"
+      ],
+      "correct_answer": "12",
+      "explanation": "20 - 8 = 12 eggs left."
+    },
+    {
+      "id": "61",
+      "question_text": "6 + 6 = \u2026.",
+      "options": [
+        "11",
+        "12",
+        "13"
+      ],
+      "correct_answer": "12",
+      "explanation": "6 + 6 = 12."
+    },
+    {
+      "id": "62",
+      "question_text": "Which number is smaller than 8?",
+      "options": [
+        "6",
+        "9",
+        "10"
+      ],
+      "correct_answer": "6",
+      "explanation": "6 < 8."
+    },
+    {
+      "id": "63",
+      "question_text": "Tini had 14 books, bought 6 more. Total?",
+      "options": [
+        "18",
+        "19",
+        "20"
+      ],
+      "correct_answer": "20",
+      "explanation": "14 + 6 = 20 books."
+    },
+    {
+      "id": "64",
+      "question_text": "9 + 5 = \u2026.",
+      "options": [
+        "13",
+        "14",
+        "15"
+      ],
+      "correct_answer": "14",
+      "explanation": "9 + 5 = 14."
+    },
+    {
+      "id": "65",
+      "question_text": "A clock shows 3. After 4 hours, it points to\u2026.",
+      "options": [
+        "6",
+        "7",
+        "8"
+      ],
+      "correct_answer": "7",
+      "explanation": "3 + 4 = 7."
+    },
+    {
+      "id": "66",
+      "question_text": "Mother had 30 cakes, gave 10 away. How many left?",
+      "options": [
+        "15",
+        "20",
+        "25"
+      ],
+      "correct_answer": "20",
+      "explanation": "30 - 10 = 20 cakes."
+    },
+    {
+      "id": "67",
+      "question_text": "Which number is between 10 and 12?",
+      "options": [
+        "9",
+        "10",
+        "11"
+      ],
+      "correct_answer": "11",
+      "explanation": "Number between 10 and 12 is 11."
+    },
+    {
+      "id": "68",
+      "question_text": "18 - 9 = \u2026.",
+      "options": [
+        "8",
+        "9",
+        "10"
+      ],
+      "correct_answer": "9",
+      "explanation": "18 - 9 = 9."
+    },
+    {
+      "id": "69",
+      "question_text": "Rina had 16 fruits, gave 4 away. How many left?",
+      "options": [
+        "10",
+        "11",
+        "12"
+      ],
+      "correct_answer": "12",
+      "explanation": "16 - 4 = 12 fruits."
+    },
+    {
+      "id": "70",
+      "question_text": "7 + 8 = \u2026.",
+      "options": [
+        "14",
+        "15",
+        "16"
+      ],
+      "correct_answer": "15",
+      "explanation": "7 + 8 = 15."
+    }
+  ]

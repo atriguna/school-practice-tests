@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "question_text": "What is the place value of 7 in the number 47,562?",
+    "options": ["7", "700", "7,000", "70,000"],
+    "correct_answer": "7,000",
+    "explanation": "The 7 is in the thousands place, so its value is 7,000."
+  },
+  {
+    "id": 2,
+    "question_text": "Which number is smaller?",
+    "options": ["-45", "-12", "0", "8"],
+    "correct_answer": "-45",
+    "explanation": "Negative numbers are smaller than zero and positive numbers. Among these, -45 is the smallest."
+  },
+  {
+    "id": 3,
+    "question_text": "Solve: 3,426 + 2,573",
+    "options": ["5,899", "6,099", "6,001", "5,801"],
+    "correct_answer": "5,999",
+    "explanation": "3,426 + 2,573 = 5,999 by column addition."
+  },
+  {
+    "id": 4,
+    "question_text": "Solve: 8,542 - 3,218",
+    "options": ["5,324", "5,224", "5,334", "5,444"],
+    "correct_answer": "5,324",
+    "explanation": "Subtracting digit by digit: 8,542 - 3,218 = 5,324."
+  },
+  {
+    "id": 5,
+    "question_text": "What is 12 × 11?",
+    "options": ["121", "133", "132", "122"],
+    "correct_answer": "132",
+    "explanation": "12 multiplied by 11 = 132."
+  },
+  {
+    "id": 6,
+    "question_text": "What is 144 ÷ 12?",
+    "options": ["11", "12", "13", "14"],
+    "correct_answer": "12",
+    "explanation": "144 divided by 12 = 12."
+  },
+  {
+    "id": 7,
+    "question_text": "Which fraction is equivalent to 2/3?",
+    "options": ["4/6", "6/10", "5/9", "3/7"],
+    "correct_answer": "4/6",
+    "explanation": "Multiplying numerator and denominator of 2/3 by 2 gives 4/6."
+  },
+  {
+    "id": 8,
+    "question_text": "Which is the correct equivalent of 1/2?",
+    "options": ["2/3", "3/4", "50/100", "25/75"],
+    "correct_answer": "50/100",
+    "explanation": "1/2 = 50/100 when both numerator and denominator are multiplied by 50."
+  },
+  {
+    "id": 9,
+    "question_text": "Find the perimeter of a rectangle with length 12 cm and width 8 cm.",
+    "options": ["20 cm", "36 cm", "40 cm", "44 cm"],
+    "correct_answer": "40 cm",
+    "explanation": "Perimeter = 2 × (length + width) = 2 × (12 + 8) = 40 cm."
+  },
+  {
+    "id": 10,
+    "question_text": "Find the area of a rectangle with length 15 cm and width 6 cm.",
+    "options": ["75 cm²", "80 cm²", "90 cm²", "100 cm²"],
+    "correct_answer": "90 cm²",
+    "explanation": "Area = length × width = 15 × 6 = 90 cm²."
+  },
+  {
+    "id": 11,
+    "question_text": "A square has sides of 9 cm. What is its perimeter?",
+    "options": ["27 cm", "36 cm", "45 cm", "81 cm"],
+    "correct_answer": "36 cm",
+    "explanation": "Perimeter = 4 × side = 4 × 9 = 36 cm."
+  },
+  {
+    "id": 12,
+    "question_text": "What is the measure of a right angle?",
+    "options": ["30°", "45°", "60°", "90°"],
+    "correct_answer": "90°",
+    "explanation": "By definition, a right angle measures 90 degrees."
+  },
+  {
+    "id": 13,
+    "question_text": "Which shape has lines of symmetry?",
+    "options": ["Circle", "Triangle", "Rectangle", "All of these"],
+    "correct_answer": "All of these",
+    "explanation": "Circles, rectangles, and some triangles all have at least one line of symmetry."
+  },
+  {
+    "id": 14,
+    "question_text": "What is the angle sum of a triangle?",
+    "options": ["90°", "120°", "180°", "360°"],
+    "correct_answer": "180°",
+    "explanation": "The interior angles of a triangle always add up to 180°."
+  },
+  {
+    "id": 15,
+    "question_text": "A clock shows 3:00. What angle is formed between the hour and minute hands?",
+    "options": ["45°", "90°", "120°", "180°"],
+    "correct_answer": "90°",
+    "explanation": "At 3:00, the hands form a right angle of 90°."
+  },
+  {
+    "id": 16,
+    "question_text": "If a train leaves at 08:15 and arrives at 10:45, how long is the journey?",
+    "options": ["1 hour 30 minutes", "2 hours 15 minutes", "2 hours 30 minutes", "3 hours"],
+    "correct_answer": "2 hours 30 minutes",
+    "explanation": "From 08:15 to 10:45 is exactly 2 hours 30 minutes."
+  },
+  {
+    "id": 17,
+    "question_text": "If a student scores 25, 30, 20, and 25 in four weekly tests, what is the total score?",
+    "options": ["90", "95", "100", "110"],
+    "correct_answer": "100",
+    "explanation": "25 + 30 + 20 + 25 = 100."
+  },
+  {
+    "id": 18,
+    "question_text": "What is the next odd number after 99?",
+    "options": ["100", "101", "102", "103"],
+    "correct_answer": "101",
+    "explanation": "Odd numbers after 99 go 101, 103, 105..."
+  },
+  {
+    "id": 19,
+    "question_text": "Which number is divisible by 12?",
+    "options": ["120", "122", "125", "130"],
+    "correct_answer": "120",
+    "explanation": "120 ÷ 12 = 10, so it is divisible by 12."
+  },
+  {
+    "id": 20,
+    "question_text": "Which fraction is greater?",
+    "options": ["3/8", "5/12", "7/16", "2/5"],
+    "correct_answer": "5/12",
+    "explanation": "Comparing by finding common denominators, 5/12 ≈ 0.416 is the largest."
+  },
+  {
+    "id": 21,
+    "question_text": "Find the missing number: 47,000 + ? = 100,000",
+    "options": ["43,000", "52,000", "53,000", "57,000"],
+    "correct_answer": "53,000",
+    "explanation": "100,000 - 47,000 = 53,000."
+  },
+  {
+    "id": 22,
+    "question_text": "What is the product of 9 × 12?",
+    "options": ["99", "100", "108", "110"],
+    "correct_answer": "108",
+    "explanation": "9 × 12 = 108."
+  },
+  {
+    "id": 23,
+    "question_text": "A rectangle has length 20 cm and width 5 cm. Find its area.",
+    "options": ["50 cm²", "75 cm²", "100 cm²", "150 cm²"],
+    "correct_answer": "100 cm²",
+    "explanation": "Area = length × width = 20 × 5 = 100 cm²."
+  },
+  {
+    "id": 24,
+    "question_text": "Which of these times is the same as 2 hours 15 minutes?",
+    "options": ["135 minutes", "125 minutes", "145 minutes", "150 minutes"],
+    "correct_answer": "135 minutes",
+    "explanation": "2 hours = 120 minutes; 120 + 15 = 135 minutes."
+  },
+  {
+    "id": 25,
+    "question_text": "Which figure has no lines of symmetry?",
+    "options": ["Square", "Rectangle", "Scalene Triangle", "Circle"],
+    "correct_answer": "Scalene Triangle",
+    "explanation": "A scalene triangle has no equal sides, so it has no lines of symmetry."
+  }
+]
