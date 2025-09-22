@@ -53,6 +53,24 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   handler satisfies AppPageConfig<"/coming-soon">
 }
 
+// Validate ../../src/app/english/grade/[grade]/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/english/grade/[grade]/page.js")
+  handler satisfies AppPageConfig<"/english/grade/[grade]">
+}
+
+// Validate ../../src/app/english/grade/[grade]/practice/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/english/grade/[grade]/practice/page.js")
+  handler satisfies AppPageConfig<"/english/grade/[grade]/practice">
+}
+
+// Validate ../../src/app/english/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/english/page.js")
+  handler satisfies AppPageConfig<"/english">
+}
+
 // Validate ../../src/app/math/grade/[grade]/page.tsx
 {
   const handler = {} as typeof import("../../src/app/math/grade/[grade]/page.js")

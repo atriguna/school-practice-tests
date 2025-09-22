@@ -1,11 +1,12 @@
 import { mathCurriculum, getRandomSubtopic } from "../src/data/mathCurriculum";
+import { englishCurriculum, getRandomEnglishSubtopic } from "../src/data/englishCurriculum";
 
 function withCORS(data: any, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",   // ✅ izinkan semua origin
+      "Access-Control-Allow-Origin": "*",   // ✅ jangan diubah
       "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
     },
@@ -16,7 +17,7 @@ export default {
   async fetch(req: Request, env: { DEEPSEEK_KEY: string }) {
     const url = new URL(req.url);
 
-    // ✅ Handle preflight (OPTIONS)
+    // ✅ Preflight
     if (req.method === "OPTIONS") {
       return new Response(null, {
         status: 204,
@@ -61,22 +62,30 @@ Keep your tone friendly and simple.`,
 
     // ---------------- /api/question ----------------
     if (url.pathname.startsWith("/api/question") && req.method === "POST") {
-      const { grade } = await req.json();
+      const { subject = "math", grade } = await req.json();
 
       const gradeId = `grade-${grade}`;
-      const gradeData = mathCurriculum[gradeId];
+      let gradeData;
+      let subtopic;
+
+      if (subject === "math") {
+        gradeData = mathCurriculum[gradeId];
+        subtopic = getRandomSubtopic(gradeId) || "general math";
+      } else if (subject === "english") {
+        gradeData = englishCurriculum[gradeId];
+        subtopic = getRandomEnglishSubtopic(gradeId) || "general english";
+      }
+
       if (!gradeData) {
         return withCORS({ questions: [] });
       }
 
-      const subtopic = getRandomSubtopic(gradeId) || "general math";
-
       const prompt = `
       Generate 5 multiple-choice questions for ${gradeData.name} students
-      based on the Cambridge curriculum subtopic: "${subtopic}".
+      based on the Cambridge ${subject} curriculum subtopic: "${subtopic}".
 
       Rules:
-      - Strictly align with Cambridge curriculum.
+      - Strictly align with Cambridge ${subject} curriculum.
       - Provide 4 options (A–D).
       - Ensure one correctAnswer is included in the options.
       - Add a short explanation (1–2 sentences).
@@ -107,9 +116,13 @@ Keep your tone friendly and simple.`,
           messages: [{ role: "user", content: prompt }],
         }),
       });
-
+      
       const data = await res.json();
+      console.log(data);
+      
       const content = data.choices?.[0]?.message?.content ?? "{}";
+      console.log(content);
+      
       let parsed = { questions: [] };
       try {
         parsed = JSON.parse(content.replace(/```json|```/g, "").trim());
@@ -134,10 +147,10 @@ Keep your tone friendly and simple.`,
 
     // ---------------- /api/explain ----------------
     if (url.pathname.startsWith("/api/explain") && req.method === "POST") {
-      const { question, wrongAnswer, grade } = await req.json();
+      const { question, wrongAnswer, grade, subject = "math" } = await req.json();
 
       const prompt = `
-      A grade ${grade} student answered this incorrectly.
+      A grade ${grade} ${subject} student answered this incorrectly.
       Question: ${question}
       Wrong Answer: ${wrongAnswer}
       Explain why it's wrong and give the correct step-by-step solution.

@@ -55,7 +55,7 @@ const menuItems: MenuItem[] = [
     icon: Book, 
     href: '/english',
     submenu: [
-      { name: 'Grade 1', href: '/coming-soon', icon: '1️⃣' },
+      { name: 'Grade 1', href: '/english/grade/1', icon: '1️⃣' },
       { name: 'Grade 2', href: '/coming-soon', icon: '2️⃣' },
       { name: 'Grade 3', href: '/coming-soon', icon: '3️⃣' },
       { name: 'Grade 4', href: '/coming-soon', icon: '4️⃣' },

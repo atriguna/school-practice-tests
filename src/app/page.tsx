@@ -46,7 +46,12 @@ export default function Home() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {subjects.map((subject) => {
-          const href = subject.id === 'math' ? `/math` : `/coming-soon`;
+          const href =
+          subject.id === 'math'
+            ? '/math'
+            : subject.id === 'english'
+            ? '/english'
+            : '/coming-soon';
           return (
             <Link
               key={subject.id}

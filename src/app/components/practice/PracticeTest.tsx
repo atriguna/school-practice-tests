@@ -6,6 +6,7 @@ import { ArrowLeft, Check, X, Sparkles } from 'lucide-react';
 import type { Question } from '@/app/data/types';
 
 type PracticeTestProps = {
+  subject: 'math' | 'english';   // ✅ tambahin subject
   questions: Question[];
   onComplete: (score: number, total: number) => void;
   resumeIndex?: number;
@@ -15,6 +16,7 @@ type PracticeTestProps = {
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 export default function PracticeTest({
+  subject,
   questions,
   onComplete,
   resumeIndex = 0,
@@ -37,13 +39,13 @@ export default function PracticeTest({
   // 🔹 Save progress
   useEffect(() => {
     localStorage.setItem(
-      `practice-progress-grade-${grade}`,
+      `practice-progress-${subject}-grade-${grade}`,
       JSON.stringify({
         index: currentQuestionIndex,
         score,
       })
     );
-  }, [currentQuestionIndex, score, grade]);
+  }, [currentQuestionIndex, score, grade, subject]);
 
   const handleAnswer = async (option: string) => {
     if (answered) return;
@@ -54,7 +56,7 @@ export default function PracticeTest({
       setScore((s) => s + 1);
       setAiExplanation("");
     } else {
-      const key = `explain-${grade}-${currentQuestionIndex}-${option}`;
+      const key = `explain-${subject}-${grade}-${currentQuestionIndex}-${option}`;
       const cachedExplain = localStorage.getItem(key);
 
       if (cachedExplain) {
@@ -124,7 +126,9 @@ export default function PracticeTest({
 
           <div className="flex items-center gap-2 text-sky-700">
             <Sparkles className="w-5 h-5" />
-            <span className="font-semibold">Grade {grade} Math Practice</span>
+            <span className="font-semibold">
+              Grade {grade} {subject === "math" ? "Math" : "English"} Practice
+            </span>
           </div>
 
           <div className="text-sm text-gray-600">

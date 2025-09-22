@@ -7,10 +7,11 @@ import QuizResult from '@/app/components/QuizResult';
 import { Question } from '@/app/data/types';
 
 interface PracticeWrapperProps {
+  subject: 'math' | 'english'; // ✅ subject dynamic
   gradeNumber: number;
 }
 
-export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
+export default function PracticeWrapper({ subject, gradeNumber }: PracticeWrapperProps) {
   const router = useRouter();
   const grade = gradeNumber.toString();
 
@@ -19,7 +20,6 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
   const [score, setScore] = useState<number | null>(null);
   const [total, setTotal] = useState<number>(0);
 
-  // ✅ fallback harus lengkap sesuai type
   const fallbackQuestions: Question[] = [
     {
       id: 1,
@@ -31,12 +31,33 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
     },
   ];
 
-  // 🔹 Fetch questions dari Worker API
+  // 🔹 Reset cache kalau pindah subject
+  useEffect(() => {
+    const prevSubject = localStorage.getItem("activeSubject");
+
+    if (prevSubject && prevSubject !== subject) {
+      console.log(`🔄 Switching subject from ${prevSubject} to ${subject}, clearing cache...`);
+
+      // clear semua cache soal & explanation
+      Object.keys(localStorage).forEach((key) => {
+        if (key.startsWith("questions-") || key.startsWith("explain-")) {
+          localStorage.removeItem(key);
+        }
+      });
+    }
+
+    // simpan subject sekarang sebagai active
+    localStorage.setItem("activeSubject", subject);
+  }, [subject]);
+
+  // 🔹 Fetch questions dari API / cache
   const fetchQuestions = useCallback(async () => {
     setLoading(true);
 
     try {
-      const cached = localStorage.getItem(`questions-grade-${grade}`);
+      const cacheKey = `questions-${subject}-grade-${grade}`;
+      const cached = localStorage.getItem(cacheKey);
+
       if (cached) {
         console.log("📦 Loaded from cache");
         setQuestions(JSON.parse(cached));
@@ -47,7 +68,7 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
       const res = await fetch("https://api.ruangbelajar.info/api/question", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ grade }),
+        body: JSON.stringify({ subject: "english", grade }),
       });
 
       const data = await res.json();
@@ -55,21 +76,18 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
 
       if (data.questions?.length) {
         setQuestions(data.questions);
-        localStorage.setItem(
-          `questions-grade-${grade}`,
-          JSON.stringify(data.questions)
-        );
+        localStorage.setItem(cacheKey, JSON.stringify(data.questions));
       } else {
         throw new Error("API returned empty questions");
       }
     } catch (err) {
       console.error("❌ Error fetching questions, using fallback:", err);
       setQuestions(fallbackQuestions);
-      localStorage.removeItem(`questions-grade-${grade}`);
+      localStorage.removeItem(`questions-${subject}-grade-${grade}`);
     } finally {
       setLoading(false);
     }
-  }, [grade]);
+  }, [grade, subject]);
 
   useEffect(() => {
     fetchQuestions();
@@ -81,7 +99,7 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
       const res = await fetch("https://api.ruangbelajar.info/api/explain", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question, wrongAnswer, grade }),
+        body: JSON.stringify({ question, wrongAnswer, subject, grade }),
       });
 
       const data = await res.json();
@@ -97,10 +115,10 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
     setScore(s);
     setTotal(t);
 
-    // clear cache
-    localStorage.removeItem(`questions-grade-${grade}`);
+    // clear cache hanya untuk grade ini
+    localStorage.removeItem(`questions-${subject}-grade-${grade}`);
     Object.keys(localStorage).forEach((key) => {
-      if (key.startsWith(`explain-${grade}-`)) {
+      if (key.startsWith(`explain-${subject}-${grade}-`)) {
         localStorage.removeItem(key);
       }
     });
@@ -108,7 +126,7 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
 
   const handleCloseResult = () => {
     setScore(null);
-    router.push(`/math/grade/${grade}`);
+    router.push(`/${subject}/grade/${grade}`); // ✅ balik ke subject sesuai
   };
 
   return (
@@ -127,9 +145,10 @@ export default function PracticeWrapper({ gradeNumber }: PracticeWrapperProps) {
 
       {!loading && questions.length > 0 && score === null && (
         <PracticeTest
+          subject={subject} 
           questions={questions}
           onComplete={handleComplete}
-          fetchExplanation={fetchExplanation} // 🔹 lempar ke PracticeTest
+          fetchExplanation={fetchExplanation}
         />
       )}
 
